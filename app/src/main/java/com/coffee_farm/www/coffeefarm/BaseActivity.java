@@ -1,4 +1,4 @@
-package com.coffee_farm.www.coffeefarm.Activity;
+package com.coffee_farm.www.coffeefarm;
 
 import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
