@@ -1,4 +1,4 @@
-package com.coffee_farm.www.coffeefarm.Fragment;
+package com.coffee_farm.www.coffeefarm.Fragment.Home;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -13,12 +13,12 @@ import com.coffee_farm.www.coffeefarm.R;
  * Created by the on 2017-11-22.
  */
 
-public class KategorieFragment extends Fragment {
+public class CoffeeMachineFragment extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_kategorie, container, false);
-        return view;
+        View vIew = inflater.inflate(R.layout.fragment_coffeemachine, container, false);
+        return vIew;
     }
 }

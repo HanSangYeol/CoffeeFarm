@@ -5,7 +5,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import com.coffee_farm.www.coffeefarm.Fragment.HomeFragment;
-import com.coffee_farm.www.coffeefarm.Fragment.KategorieFragment;
+import com.coffee_farm.www.coffeefarm.Fragment.CategorieFragment;
 import com.coffee_farm.www.coffeefarm.Fragment.MyPageFragment;
 
 /**
@@ -14,7 +14,7 @@ import com.coffee_farm.www.coffeefarm.Fragment.MyPageFragment;
 
 public class MainPageAdapter extends FragmentPagerAdapter {
 
-    final int PAGE_COUNT = 3;
+    final int PAGE_COUNT = 9;
 
     public MainPageAdapter(FragmentManager fm){
         super(fm);
@@ -32,7 +32,7 @@ public class MainPageAdapter extends FragmentPagerAdapter {
             case 0:
                 return new HomeFragment();
             case 1:
-                return new KategorieFragment();
+                return new CategorieFragment();
             case 2:
                 return new MyPageFragment();
             default:

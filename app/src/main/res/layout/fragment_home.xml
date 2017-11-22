@@ -1,13 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="home"/>
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher_round"/>
+    </LinearLayout>
+
+    <android.support.design.widget.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabMode="scrollable">
+        <android.support.design.widget.TabItem
+            android:id="@+id/tabItem1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="전체보기"/>
+        <android.support.design.widget.TabItem
+            android:id="@+id/tabItem2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="생두"/>
+        <android.support.design.widget.TabItem
+            android:id="@+id/tabItem3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="원두"/>
+        <android.support.design.widget.TabItem
+            android:id="@+id/tabItem4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="티백/제품"/>
+        <android.support.design.widget.TabItem
+            android:id="@+id/tabItem5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="세트상품"/>
+        <android.support.design.widget.TabItem
+            android:id="@+id/tabItem6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="선물상품"/>
+        <android.support.design.widget.TabItem
+            android:id="@+id/tabItem7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="에스프레소"/>
+        <android.support.design.widget.TabItem
+            android:id="@+id/tabItem8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="핸드드립"/>
+        <android.support.design.widget.TabItem
+            android:id="@+id/tabItem9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="커피머신"/>
+
+    </android.support.design.widget.TabLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
 
 </LinearLayout>
