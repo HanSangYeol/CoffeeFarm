@@ -2,7 +2,7 @@ package com.coffee_farm.www.coffeefarm.Adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentStatePagerAdapter;
 
 import com.coffee_farm.www.coffeefarm.Fragment.Home.AllViewFragment;
 import com.coffee_farm.www.coffeefarm.Fragment.Home.BeanFragment;
@@ -21,7 +21,7 @@ import com.coffee_farm.www.coffeefarm.Fragment.MyPageFragment;
  * Created by the on 2017-11-22.
  */
 
-public class HomeFragmentAdapter extends FragmentPagerAdapter {
+public class HomeFragmentAdapter extends FragmentStatePagerAdapter {
 
     final int PAGE_COUNT = 9;
 
