@@ -57,6 +57,8 @@ public class GreenBeanFragment extends Fragment {
 
     private void setValues() {
 
+        GlobalUtil.GREENBEAN_DATE();
+
         flowLayout.removeAllViews();
         LayoutInflater inf = LayoutInflater.from(getActivity());
 
@@ -82,6 +84,12 @@ public class GreenBeanFragment extends Fragment {
 
 
         }
+
+        String[] str = getResources().getStringArray(R.array.spinnerArray);
+        ArrayAdapter<CharSequence> mAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.spinnerArray, R.layout.spinner_layout);
+        mAdapter.setDropDownViewResource(R.layout.spinner_layout);
+        spinner.setAdapter(mAdapter);
+
 
 
     }

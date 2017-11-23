@@ -109,14 +109,14 @@
             </LinearLayout>
         </LinearLayout>
 
-        <GridView
-            android:id="@+id/gridView"
-            android:layout_width="match_parent"
+        <org.apmem.tools.layouts.FlowLayout
+            android:id="@+id/flowLayout"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:columnWidth="200dp"
-            android:horizontalSpacing="10dp"
-            android:numColumns="3"
-            android:verticalSpacing="10dp"></GridView>
+            >
+        </org.apmem.tools.layouts.FlowLayout>
+
     </LinearLayout>
 
 
