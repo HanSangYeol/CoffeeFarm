@@ -7,7 +7,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.GridView;
+import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.coffee_farm.www.coffeefarm.Adapter.GridViewAdapter;
 import com.coffee_farm.www.coffeefarm.R;
@@ -19,11 +22,17 @@ import com.coffee_farm.www.coffeefarm.R;
 public class GreenBeanFragment extends Fragment {
 
     private android.widget.GridView gridView1;
+    private android.widget.TextView categoryName;
+    private android.widget.TextView categoryCount;
+    private android.widget.Spinner spinner;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View vIew = inflater.inflate(R.layout.fragment_greenbean, container, false);
+        this.spinner = (Spinner) vIew.findViewById(R.id.spinner);
+        this.categoryCount = (TextView) vIew.findViewById(R.id.categoryCount);
+        this.categoryName = (TextView) vIew.findViewById(R.id.categoryName);
         this.gridView1 = (GridView) vIew.findViewById(R.id.gridView1);
         return vIew;
     }
@@ -31,7 +40,13 @@ public class GreenBeanFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        setupEvents();
+        setValues();
 
+
+    }
+
+    private void setValues() {
         int img[] = {R.drawable.bean, R.drawable.bean, R.drawable.bean, R.drawable.bean, R.drawable.bean, R.drawable.bean,};
 
         // 커스텀 아답타 생성
@@ -41,7 +56,13 @@ public class GreenBeanFragment extends Fragment {
 
         gridView1.setAdapter(adapter);  // 커스텀 어뎁터를 GridView 에 적용
 
+        String[] str = getResources().getStringArray(R.array.spinnerArray);
+        ArrayAdapter<CharSequence> mAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.spinnerArray,  R.layout.spinner_layout);
+        mAdapter.setDropDownViewResource(R.layout.spinner_layout);
+        spinner.setAdapter(mAdapter);
+    }
 
+    private void setupEvents() {
         // GridView 아이템을 클릭하면 position을 넘겨줄수있슴
         gridView1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -50,6 +71,19 @@ public class GreenBeanFragment extends Fragment {
             }
         });
 
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
 
     }
 }

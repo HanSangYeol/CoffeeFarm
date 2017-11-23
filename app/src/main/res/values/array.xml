@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="spinnerArray">
+        <item>인기도순</item>
+        <item>신상품순</item>
+        <item>상품명순</item>
+        <item>높은가격순</item>
+        <item>낮은가격순</item>
+    </string-array>
+
+</resources>
