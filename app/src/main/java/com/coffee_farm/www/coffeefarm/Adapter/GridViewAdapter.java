@@ -47,7 +47,7 @@ public class GridViewAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         if (convertView==null)
             convertView = inf.inflate(layout, null);
-        ImageView iv = (ImageView)convertView.findViewById(R.id.Img);
+        ImageView iv = (ImageView)convertView.findViewById(R.id.titleImg);
         iv.setImageResource(img[position]);
 
         return convertView;

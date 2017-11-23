@@ -10,6 +10,7 @@ public class Bean {
 
     private int id;
     private String title; // 이름
+    private String title_Img; // 타이틀사진
     private int price; // 가격
     private String manufacturer; // 제조사
     private int saved_money; // 적립금
@@ -27,9 +28,10 @@ public class Bean {
     public Bean() {
     }
 
-    public Bean(int id, String title, int price, String manufacturer, int saved_money, int distribution_cost, int asset_inventory_surplus, String grade, String country_of_origin, int count, boolean for_sale, List<String> product_picture, String product_detail_info) {
+    public Bean(int id, String title, String title_Img, int price, String manufacturer, int saved_money, int distribution_cost, int asset_inventory_surplus, String grade, String country_of_origin, int count, boolean for_sale, List<String> product_picture, String product_detail_info) {
         this.id = id;
         this.title = title;
+        this.title_Img = title_Img;
         this.price = price;
         this.manufacturer = manufacturer;
         this.saved_money = saved_money;
@@ -57,6 +59,14 @@ public class Bean {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public String getTitle_Img() {
+        return title_Img;
+    }
+
+    public void setTitle_Img(String title_Img) {
+        this.title_Img = title_Img;
     }
 
     public int getPrice() {

@@ -59,6 +59,8 @@ public class BeanFragment extends Fragment {
         ArrayAdapter<CharSequence> mAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.spinnerArray, R.layout.spinner_layout);
         mAdapter.setDropDownViewResource(R.layout.spinner_layout);
         spinner.setAdapter(mAdapter);
+
+
     }
 
     private void setupEvents() {
