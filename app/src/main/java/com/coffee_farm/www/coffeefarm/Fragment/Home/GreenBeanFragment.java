@@ -47,7 +47,7 @@ public class GreenBeanFragment extends Fragment {
     }
 
     private void setValues() {
-        int img[] = {R.drawable.bean, R.drawable.bean, R.drawable.bean, R.drawable.bean, R.drawable.bean, R.drawable.bean,};
+        int img[] = {R.drawable.bean, R.drawable.bean, R.drawable.bean, R.drawable.bean, R.drawable.bean, R.drawable.bean};
 
         // 커스텀 아답타 생성
         GridViewAdapter adapter = new GridViewAdapter(

@@ -18,6 +18,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1">
                 <LinearLayout
+                    android:tag="0"
                     android:id="@+id/homeFragLayout"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
@@ -28,6 +29,112 @@
                         android:layout_height="match_parent"
                         tools:layout="@layout/fragment_categorie_home"/>
                 </LinearLayout>
+                <LinearLayout
+                    android:tag="1"
+                    android:id="@+id/greenbeanFragLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+                    <fragment
+                        android:id="@+id/greenbeanFragment"
+                        class="com.coffee_farm.www.coffeefarm.Fragment.Home.GreenBeanFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:layout="@layout/fragment_greenbean"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:tag="2"
+                    android:id="@+id/beanFragLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+                    <fragment
+                        android:id="@+id/beanFragment"
+                        class="com.coffee_farm.www.coffeefarm.Fragment.Home.BeanFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:layout="@layout/fragment_bean"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:tag="3"
+                    android:id="@+id/teebagFragLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+                    <fragment
+                        android:id="@+id/teebagFragment"
+                        class="com.coffee_farm.www.coffeefarm.Fragment.Home.TeebagFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:layout="@layout/fragment_teebag"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:tag="4"
+                    android:id="@+id/setproductFragLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+                    <fragment
+                        android:id="@+id/setproductFragment"
+                        class="com.coffee_farm.www.coffeefarm.Fragment.Home.SetProductFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:layout="@layout/fragment_setproduct"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:tag="5"
+                    android:id="@+id/presentFragLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+                    <fragment
+                        android:id="@+id/presentFragment"
+                        class="com.coffee_farm.www.coffeefarm.Fragment.Home.PresentSetFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:layout="@layout/fragment_presentset"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:tag="6"
+                    android:id="@+id/espressoFragLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+                    <fragment
+                        android:id="@+id/espressoFragment"
+                        class="com.coffee_farm.www.coffeefarm.Fragment.Home.EsprossoFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:layout="@layout/fragment_espresso"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:tag="7"
+                    android:id="@+id/handdripFragLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+                    <fragment
+                        android:id="@+id/handdripFragment"
+                        class="com.coffee_farm.www.coffeefarm.Fragment.Home.HandDripFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:layout="@layout/fragment_handdrip"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:tag="8"
+                    android:id="@+id/coffeeMachineFragLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+                    <fragment
+                        android:id="@+id/coffeeMachineFragment"
+                        class="com.coffee_farm.www.coffeefarm.Fragment.Home.CoffeeMachineFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:layout="@layout/fragment_coffeemachine"/>
+                </LinearLayout>
+
+
             </FrameLayout>
 
             <TextView
@@ -53,8 +160,8 @@
                         android:layout_weight="1">
 
                         <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
                             android:src="@drawable/ic_notice"/>
                         <TextView
                             android:paddingTop="10dp"
@@ -77,8 +184,8 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1">
                         <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
                             android:src="@drawable/ic_review"/>
                         <TextView
                             android:paddingTop="10dp"
@@ -101,8 +208,8 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1">
                         <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
                             android:src="@drawable/ic_qa"/>
                         <TextView
                             android:paddingTop="10dp"
@@ -133,8 +240,8 @@
                         android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
                             android:src="@drawable/ic_news"/>
 
                         <TextView
@@ -160,8 +267,8 @@
                         android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
                             android:src="@drawable/ic_data"/>
 
                         <TextView
@@ -187,8 +294,8 @@
                         android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
                             android:src="@drawable/ic_visit"/>
 
                         <TextView
@@ -455,6 +562,7 @@
                     android:textSize="12sp"/>
             </LinearLayout>
             <LinearLayout
+                android:layout_marginTop="5dp"
                 android:gravity="center"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
