@@ -5,83 +5,102 @@
     android:orientation="vertical">
 
     <LinearLayout
-        android:padding="10dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
             <TextView
-                android:paddingLeft="20dp"
-                android:gravity="center|left"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
-                android:textStyle="bold"
+                android:background="@color/soft_gray"
+                android:gravity="center|left"
+                android:paddingLeft="20dp"
                 android:text="생두"
-                android:background="@color/soft_gray"/>
+                android:textStyle="bold" />
+
             <LinearLayout
-                android:gravity="center"
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="20dp">
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <TextView
-                    android:gravity="center"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:gravity="center"
                     android:text="PNG/오세아니아"
-                    android:textSize="12sp"/>
+                    android:textSize="12sp" />
+
                 <TextView
-                    android:gravity="center"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:gravity="center"
                     android:text="중남미"
-                    android:textSize="12sp"/>
+                    android:textSize="12sp" />
+
                 <TextView
-                    android:gravity="center"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:gravity="center"
                     android:text="아프리카"
-                    android:textSize="12sp"/>
+                    android:textSize="12sp" />
 
             </LinearLayout>
+
             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
                 android:layout_marginTop="5dp"
                 android:gravity="center"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="20dp">
+                android:orientation="horizontal">
 
                 <TextView
-                    android:gravity="center"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:gravity="center"
                     android:text="북미/하와이"
-                    android:textSize="12sp"/>
+                    android:textSize="12sp" />
+
                 <TextView
-                    android:gravity="center"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:gravity="center"
                     android:text="아시아/중동"
-                    android:textSize="12sp"/>
+                    android:textSize="12sp" />
+
                 <TextView
-                    android:gravity="center"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:gravity="center"
                     android:text="기타"
-                    android:textSize="12sp"/>
+                    android:textSize="12sp" />
 
             </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
 
+        <GridView
+            android:id="@+id/gridView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnWidth="200dp"
+            android:horizontalSpacing="10dp"
+            android:numColumns="3"
+            android:verticalSpacing="10dp"></GridView>
+
+
+    </LinearLayout>
 
 
 </LinearLayout>
