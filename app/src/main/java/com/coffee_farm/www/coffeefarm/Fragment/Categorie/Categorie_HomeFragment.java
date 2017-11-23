@@ -51,12 +51,27 @@ public class Categorie_HomeFragment extends Fragment {
     }
 
     private void setupEvents() {
-        greenbeanBtn.setOnClickListener(new View.OnClickListener() {
+        View.OnClickListener clickListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                LinearLayout[] layout = {greenbeanBtn, beanBtn, teebagBtn, setproductBtn, presentsetBtn,
+                espressoBtn, handdripBtn, coffeeMachineBtn};
+
+                int index = Integer.parseInt(view.getTag().toString());
+
+                CategorieFragment.categorieFragment.changeFrag(index);
 
             }
-        });
+        };
+        greenbeanBtn.setOnClickListener(clickListener);
+        beanBtn.setOnClickListener(clickListener);
+        teebagBtn.setOnClickListener(clickListener);
+        setproductBtn.setOnClickListener(clickListener);
+        presentsetBtn.setOnClickListener(clickListener);
+        espressoBtn.setOnClickListener(clickListener);
+        handdripBtn.setOnClickListener(clickListener);
+        coffeeMachineBtn.setOnClickListener(clickListener);
+
     }
 
     private void setValues() {

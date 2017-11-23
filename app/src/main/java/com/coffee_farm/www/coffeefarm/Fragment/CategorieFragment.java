@@ -35,6 +35,8 @@ public class CategorieFragment extends Fragment {
     private android.widget.LinearLayout dataLayout;
     private android.widget.LinearLayout visitLayout;
 
+    public static CategorieFragment categorieFragment;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -57,35 +59,34 @@ public class CategorieFragment extends Fragment {
         return view;
     }
 
+
     @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
         setEvents();
         setValues();
     }
 
     private void setValues() {
 
+        categorieFragment = this;
+
     }
 
     private void setEvents() {
     }
 
-    public void setClickListener(){
+    public void changeFrag(int index){
         final LinearLayout[] frag = {homeFragLayout, greenbeanFragLayout, beanFragLayout, teebagFragLayout, setproductFragLayout,
                 presentFragLayout, espressoFragLayout, handdripFragLayout, coffeeMachineFragLayout};
 
-        View.OnClickListener clickListener = new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                for (LinearLayout linearLayout : frag) {
-                    linearLayout.setVisibility(View.GONE);
-                }
-                int index = Integer.parseInt(view.getTag().toString());
+        for (LinearLayout linearLayout : frag) {
+            linearLayout.setVisibility(View.GONE);
+        }
 
-                frag[index].setVisibility(View.VISIBLE);
-            }
-        };
+        frag[index].setVisibility(View.VISIBLE);
     }
+
+
 
 }
