@@ -79,72 +79,75 @@
                     android:textSize="12sp"/>
 
             </LinearLayout>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_marginTop="5dp"
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="CATEGORY GOODS"
-                android:textSize="12sp"/>
 
             <LinearLayout
-                android:layout_marginTop="5dp"
+                android:padding="10dp"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:id="@+id/categoryName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="커피제품"
-                    android:textColor="@color/product_text"
-                    android:textSize="12sp"
-                    android:textStyle="bold"/>
-                <TextView
-                    android:layout_marginLeft="5dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="12sp"
-                    android:text="총"/>
-                <TextView
-                    android:id="@+id/categoryCount"
-                    android:layout_marginLeft="5dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="12sp"
-                    android:textStyle="bold"
-                    android:text="4"
-                    android:textColor="@color/product_text"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="12sp"
-                    android:text="개의 상품이 있습니다."/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"/>
-                <Spinner
-                    android:id="@+id/spinner"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentTop="true">
+                    android:text="CATEGORY GOODS"
+                    android:textSize="12sp"/>
 
-                </Spinner>
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/categoryName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="커피제품"
+                        android:textColor="@color/product_text"
+                        android:textSize="12sp"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="총"/>
+                    <TextView
+                        android:id="@+id/categoryCount"
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:text="4"
+                        android:textColor="@color/product_text"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="개의 상품이 있습니다."/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+                    <Spinner
+                        android:id="@+id/spinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:spinnerMode="dialog"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true">
+
+                    </Spinner>
+                </LinearLayout>
             </LinearLayout>
+
+            <org.apmem.tools.layouts.FlowLayout
+                android:id="@+id/flowLayout"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                >
+            </org.apmem.tools.layouts.FlowLayout>
         </LinearLayout>
 
-        <org.apmem.tools.layouts.FlowLayout
-            android:id="@+id/flowLayout"
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            >
-        </org.apmem.tools.layouts.FlowLayout>
 
     </LinearLayout>
 

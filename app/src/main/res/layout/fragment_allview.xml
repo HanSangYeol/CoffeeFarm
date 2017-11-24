@@ -4,5 +4,36 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <ViewFlipper
+        android:id="@+id/mainViewFlipper"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FD9296"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FEBE92"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#8CE1F7"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#38A2D0"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F567F7"/>
+
+    </ViewFlipper>
 
 </LinearLayout>

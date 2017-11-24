@@ -1,14 +1,16 @@
 package com.coffee_farm.www.coffeefarm.Fragment.Home;
 
+import android.content.Context;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -25,6 +27,9 @@ import org.apmem.tools.layouts.FlowLayout;
  */
 
 public class BeanFragment extends Fragment {
+
+    DisplayMetrics displayMetrics = new DisplayMetrics();
+
 
     private android.widget.TextView categoryName;
     private android.widget.TextView categoryCount;
@@ -53,6 +58,11 @@ public class BeanFragment extends Fragment {
     private void setValues() {
 
 
+        getActivity().getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+        int height = displayMetrics.heightPixels;
+        int width = displayMetrics.widthPixels - (int) convertDpToPixel(30, getActivity());
+
+
         GlobalUtil.BEAN_DATE();
 
         flowLayout.removeAllViews();
@@ -64,6 +74,9 @@ public class BeanFragment extends Fragment {
 
 //            XML로 그려낸 이미지뷰 받아오기.
             final View view = inf.inflate(R.layout.product_item, null);
+
+            view.setLayoutParams(new ViewGroup.LayoutParams(width/3, height/3));
+
 //            뷰의 태그에는, 내 자신이 몇번째 페이지인지 기록.
             view.setTag(pageNum);
 //            기록이 끝나고 나면 페이지 숫자를 하나 증가.
@@ -107,5 +120,14 @@ public class BeanFragment extends Fragment {
         });
 
     }
+
+    public static float convertDpToPixel(float dp, Context context){
+        Resources resources = context.getResources();
+        DisplayMetrics metrics = resources.getDisplayMetrics();
+        float px = dp * (metrics.densityDpi / 160f);
+        return px;
+    }
+
+
 
 }
