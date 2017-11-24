@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,6 +31,9 @@ import java.util.ArrayList;
  */
 
 public class GreenBeanFragment extends Fragment {
+
+    DisplayMetrics displayMetrics = new DisplayMetrics();
+
 
     private android.widget.TextView categoryName;
     private android.widget.TextView categoryCount;
@@ -57,6 +62,12 @@ public class GreenBeanFragment extends Fragment {
 
     private void setValues() {
 
+        getActivity().getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+        int height = displayMetrics.heightPixels;
+        int width = displayMetrics.widthPixels;
+
+        Log.d("width", width+"");
+
         GlobalUtil.GREENBEAN_DATE();
 
         flowLayout.removeAllViews();
@@ -68,6 +79,9 @@ public class GreenBeanFragment extends Fragment {
 
 //            XML로 그려낸 이미지뷰 받아오기.
             final View view = inf.inflate(R.layout.product_item, null);
+
+
+            view.setLayoutParams(new ViewGroup.LayoutParams(width/3, height/2));
 //            뷰의 태그에는, 내 자신이 몇번째 페이지인지 기록.
             view.setTag(pageNum);
 //            기록이 끝나고 나면 페이지 숫자를 하나 증가.
@@ -78,6 +92,7 @@ public class GreenBeanFragment extends Fragment {
             TextView titleTxt = (TextView)view.findViewById(R.id.titleTxt);
             ImageView titleImg = (ImageView)view.findViewById(R.id.titleImg);
             titleTxt.setText(beanData.getTitle());
+//            titleImg.setLayoutParams(new ViewGroup.LayoutParams(width/3, 100));
             Glide.with(getActivity()).load(beanData.getTitle_Img()).into(titleImg);
 
             flowLayout.addView(view);
