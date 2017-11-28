@@ -22,10 +22,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MyPageDetailActivity"
+            android:name=".MyPageRelationActivity"
             android:label="@string/title_activity_my_page_detail" />
         <activity
-            android:name=".CategoryDetailActivity"
+            android:name=".CategoryRelationActivity"
             android:label="@string/title_activity_category_detail"></activity>
     </application>
 
