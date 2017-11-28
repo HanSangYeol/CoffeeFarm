@@ -4,11 +4,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
+import com.coffee_farm.www.coffeefarm.CategoryRelationActivity;
 import com.coffee_farm.www.coffeefarm.R;
 
 import java.security.PublicKey;
@@ -74,6 +76,23 @@ public class CategorieFragment extends Fragment {
     }
 
     private void setEvents() {
+        View.OnClickListener onClickListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), CategoryRelationActivity.class);
+                intent.putExtra("categoryNumbering", Integer.parseInt(view.getTag().toString()));
+                startActivity(intent);
+
+                Log.d("test", view.getTag().toString());
+            }
+        };
+        noticeLayout.setOnClickListener(onClickListener);
+        reviewLayout.setOnClickListener(onClickListener);
+        qaLayout.setOnClickListener(onClickListener);
+        newsLayout.setOnClickListener(onClickListener);
+        dataLayout.setOnClickListener(onClickListener);
+        visitLayout.setOnClickListener(onClickListener);
+
     }
 
     public void changeFrag(int index){

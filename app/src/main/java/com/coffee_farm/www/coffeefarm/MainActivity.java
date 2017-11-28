@@ -1,8 +1,10 @@
 package com.coffee_farm.www.coffeefarm;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -13,6 +15,7 @@ import com.coffee_farm.www.coffeefarm.Fragment.HomeFragment;
 
 public class MainActivity extends BaseActivity {
 
+    int RETURN_ACTIVITY;
 
     long backPressedTimeInMillis = 0;
 
@@ -26,8 +29,8 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        RETURN_ACTIVITY = getIntent().getIntExtra("result_home", 0);
         bindView();
-
         setupEvents();
         setValues();
 
@@ -36,8 +39,18 @@ public class MainActivity extends BaseActivity {
     @Override
     public void setValues() {
 
+        if (RETURN_ACTIVITY == 0){
+            bottomTab.setSelectedItemId(R.id.navigation_home);
+        }else if (RETURN_ACTIVITY == 1){
+            bottomTab.setSelectedItemId(R.id.navigation_kategorie);
+        }else {
+            bottomTab.setSelectedItemId(R.id.navigation_mypage);
+        }
+
 
     }
+
+
 
     @Override
     public void setupEvents() {

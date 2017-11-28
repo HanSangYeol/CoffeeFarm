@@ -154,6 +154,7 @@
                     android:layout_height="wrap_content">
                     <LinearLayout
                         android:id="@+id/noticeLayout"
+                        android:tag="0"
                         android:paddingTop="10dp"
                         android:paddingBottom="10dp"
                         android:gravity="center"
@@ -179,6 +180,7 @@
                         android:background="@color/soft_gray"/>
                     <LinearLayout
                         android:id="@+id/reviewLayout"
+                        android:tag="1"
                         android:paddingTop="10dp"
                         android:paddingBottom="10dp"
                         android:gravity="center"
@@ -203,6 +205,7 @@
                         android:background="@color/soft_gray"/>
                     <LinearLayout
                         android:id="@+id/qaLayout"
+                        android:tag="2"
                         android:paddingTop="10dp"
                         android:paddingBottom="10dp"
                         android:gravity="center"
@@ -234,6 +237,7 @@
 
                     <LinearLayout
                         android:id="@+id/newsLayout"
+                        android:tag="3"
                         android:paddingTop="10dp"
                         android:paddingBottom="10dp"
                         android:layout_width="0dp"
@@ -261,6 +265,7 @@
                         android:background="@color/soft_gray"/>
                     <LinearLayout
                         android:id="@+id/dataLayout"
+                        android:tag="4"
                         android:paddingTop="10dp"
                         android:paddingBottom="10dp"
                         android:layout_width="0dp"
@@ -288,6 +293,7 @@
                         android:background="@color/soft_gray"/>
                     <LinearLayout
                         android:id="@+id/visitLayout"
+                        android:tag="5"
                         android:paddingTop="10dp"
                         android:paddingBottom="10dp"
                         android:layout_width="0dp"
