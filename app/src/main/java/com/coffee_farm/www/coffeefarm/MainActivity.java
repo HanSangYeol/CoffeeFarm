@@ -9,6 +9,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.coffee_farm.www.coffeefarm.Fragment.CategorieFragment;
+import com.coffee_farm.www.coffeefarm.Fragment.HomeFragment;
 
 public class MainActivity extends BaseActivity {
 
@@ -26,6 +27,7 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         bindView();
+
         setupEvents();
         setValues();
 
@@ -33,6 +35,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void setValues() {
+
 
     }
 
@@ -47,6 +50,7 @@ public class MainActivity extends BaseActivity {
                 switch (item.getItemId()) {
                     case R.id.navigation_home:
                         homeFragLayout.setVisibility(View.VISIBLE);
+                        HomeFragment.homeFragment.changeFrag();
                         kategorieFragLayout.setVisibility(View.GONE);
                         mypageFragLayout.setVisibility(View.GONE);
                         return true;

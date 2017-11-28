@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import com.coffee_farm.www.coffeefarm.Adapter.HomeFragmentAdapter;
 import com.coffee_farm.www.coffeefarm.R;
@@ -32,6 +33,8 @@ public class HomeFragment extends Fragment {
     private android.support.design.widget.TabItem tabItem9;
     private android.support.v4.view.ViewPager viewpager;
     private android.support.design.widget.TabLayout tabLayout;
+
+    public static HomeFragment homeFragment;
 
     @Nullable
     @Override
@@ -62,5 +65,14 @@ public class HomeFragment extends Fragment {
         viewpager.setAdapter(new HomeFragmentAdapter(getChildFragmentManager()));
         viewpager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(viewpager));
+
+        homeFragment = this;
     }
+
+    public void changeFrag(){
+
+        TabLayout.Tab tab = tabLayout.getTabAt(0);
+        tab.select();
+    }
+
 }
