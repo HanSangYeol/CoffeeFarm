@@ -23,7 +23,7 @@ public class MainActivity extends BaseActivity {
     private LinearLayout homeFragLayout;
     private LinearLayout kategorieFragLayout;
     private LinearLayout mypageFragLayout;
-    private BottomNavigationView bottomTab;
+    public BottomNavigationView bottomTab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,13 +39,7 @@ public class MainActivity extends BaseActivity {
     @Override
     public void setValues() {
 
-        if (RETURN_ACTIVITY == 0){
-            bottomTab.setSelectedItemId(R.id.navigation_home);
-        }else if (RETURN_ACTIVITY == 1){
-            bottomTab.setSelectedItemId(R.id.navigation_kategorie);
-        }else {
-            bottomTab.setSelectedItemId(R.id.navigation_mypage);
-        }
+
 
 
     }

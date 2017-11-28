@@ -13,7 +13,7 @@ import com.coffee_farm.www.coffeefarm.Fragment.CategoryRelation.MaterialFragment
 
 public class CategoryRelationActivity extends BaseActivity {
 
-    int RESULT_NUM;
+    int RESULT_NUM = 0;
 
 
     private BottomNavigationView bottomTab;
@@ -60,26 +60,24 @@ public class CategoryRelationActivity extends BaseActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.navigation_home:
-                        Intent intent = new Intent(mContext, MainActivity.class);
+                        Intent intent = new Intent();
                         intent.putExtra("return_home", 0);
-                        startActivity(intent);
+                        setResult(RESULT_OK, intent);
                         finish();
                         return true;
                     case R.id.navigation_kategorie:
-                        intent = new Intent(mContext, MainActivity.class);
+                        intent = new Intent();
                         intent.putExtra("return_home", 1);
-                        startActivity(intent);
+                        setResult(RESULT_OK, intent);
                         finish();
                         return true;
                     case R.id.navigation_mypage:
-                        intent = new Intent(mContext, MainActivity.class);
+                        intent = new Intent();
                         intent.putExtra("return_home", 2);
-                        startActivity(intent);
+                        setResult(RESULT_OK, intent);
                         finish();
                         return true;
                 }
-
-
 
                 return false;
             }

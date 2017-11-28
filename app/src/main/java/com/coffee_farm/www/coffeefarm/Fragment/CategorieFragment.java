@@ -1,5 +1,6 @@
 package com.coffee_farm.www.coffeefarm.Fragment;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -11,15 +12,20 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import com.coffee_farm.www.coffeefarm.CategoryRelationActivity;
+import com.coffee_farm.www.coffeefarm.MainActivity;
 import com.coffee_farm.www.coffeefarm.R;
 
 import java.security.PublicKey;
+
+import javax.xml.transform.Result;
 
 /**
  * Created by the on 2017-11-22.
  */
 
 public class CategorieFragment extends Fragment {
+
+    int REQUEST_ACTIVITY = 1000;
 
     private android.widget.LinearLayout homeFragLayout;
     private android.widget.LinearLayout greenbeanFragLayout;
@@ -81,7 +87,7 @@ public class CategorieFragment extends Fragment {
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), CategoryRelationActivity.class);
                 intent.putExtra("categoryNumbering", Integer.parseInt(view.getTag().toString()));
-                startActivity(intent);
+                startActivityForResult(intent, REQUEST_ACTIVITY);
 
                 Log.d("test", view.getTag().toString());
             }
@@ -93,6 +99,23 @@ public class CategorieFragment extends Fragment {
         dataLayout.setOnClickListener(onClickListener);
         visitLayout.setOnClickListener(onClickListener);
 
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REQUEST_ACTIVITY){
+            if (resultCode == Activity.RESULT_OK){
+                int RETURN_ACTIVITY = data.getIntExtra("return_home", 0);
+                if (RETURN_ACTIVITY == 0){
+                    ((MainActivity)getActivity()).bottomTab.setSelectedItemId(R.id.navigation_home);
+                }else if (RETURN_ACTIVITY == 1){
+                    ((MainActivity)getActivity()).bottomTab.setSelectedItemId(R.id.navigation_kategorie);
+                }else {
+                    ((MainActivity)getActivity()).bottomTab.setSelectedItemId(R.id.navigation_mypage);
+                }
+            }
+        }
     }
 
     public void changeFrag(int index){

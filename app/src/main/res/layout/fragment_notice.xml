@@ -32,5 +32,11 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/divider_brown_line" />
+    <ListView
+        android:id="@+id/noticeListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ListView>
 
 </LinearLayout>
