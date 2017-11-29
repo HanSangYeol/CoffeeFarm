@@ -77,6 +77,14 @@ public class QuestionFragment extends Fragment {
 
     private void setupEvents() {
 
+        View.OnClickListener showClickListener =  new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ImageView[] visibel = {q1visibleBtn, q2visibleBtn, q3visibleBtn, q4visibleBtn, q5visibleBtn};
+                ImageView[] gone = {q1goneBtn, q2goneBtn, q2goneBtn, q2goneBtn, q2goneBtn};
+            }
+        };
+
         q1visibleBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

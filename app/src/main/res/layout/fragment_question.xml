@@ -174,11 +174,13 @@
                                 android:layout_weight="1"/>
                             <ImageView
                                 android:id="@+id/q1visibleBtn"
+                                android:tag="0"
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
                                 android:src="@drawable/arrow_down"/>
                             <ImageView
                                 android:id="@+id/q1goneBtn"
+                                android:tag="0"
                                 android:visibility="gone"
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
@@ -187,6 +189,7 @@
 
                         <LinearLayout
                             android:id="@+id/q1contentLayout"
+                            android:tag="0"
                             android:visibility="gone"
                             android:paddingTop="10dp"
                             android:paddingLeft="20dp"
@@ -236,11 +239,13 @@
                                 android:layout_weight="1"/>
                             <ImageView
                                 android:id="@+id/q2visibleBtn"
+                                android:tag="1"
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
                                 android:src="@drawable/arrow_down"/>
                             <ImageView
                                 android:id="@+id/q2goneBtn"
+                                android:tag="1"
                                 android:visibility="gone"
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
@@ -249,6 +254,7 @@
 
                         <LinearLayout
                             android:id="@+id/q2contentLayout"
+                            android:tag="1"
                             android:visibility="gone"
                             android:paddingTop="10dp"
                             android:paddingLeft="20dp"
@@ -310,11 +316,13 @@
                                 android:layout_weight="1"/>
                             <ImageView
                                 android:id="@+id/q3visibleBtn"
+                                android:tag="2"
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
                                 android:src="@drawable/arrow_down"/>
                             <ImageView
                                 android:id="@+id/q3goneBtn"
+                                android:tag="2"
                                 android:visibility="gone"
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
@@ -323,6 +331,7 @@
 
                         <LinearLayout
                             android:id="@+id/q3contentLayout"
+                            android:tag="2"
                             android:visibility="gone"
                             android:paddingTop="10dp"
                             android:paddingLeft="20dp"
@@ -374,11 +383,13 @@
                                 android:layout_weight="1"/>
                             <ImageView
                                 android:id="@+id/q4visibleBtn"
+                                android:tag="3"
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
                                 android:src="@drawable/arrow_down"/>
                             <ImageView
                                 android:id="@+id/q4goneBtn"
+                                android:tag="3"
                                 android:visibility="gone"
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
@@ -387,6 +398,7 @@
 
                         <LinearLayout
                             android:id="@+id/q4contentLayout"
+                            android:tag="3"
                             android:visibility="gone"
                             android:paddingTop="10dp"
                             android:paddingLeft="20dp"
@@ -438,11 +450,13 @@
                                 android:layout_weight="1"/>
                             <ImageView
                                 android:id="@+id/q5visibleBtn"
+                                android:tag="4"
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
                                 android:src="@drawable/arrow_down"/>
                             <ImageView
                                 android:id="@+id/q5goneBtn"
+                                android:tag="4"
                                 android:visibility="gone"
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
@@ -451,6 +465,7 @@
 
                         <LinearLayout
                             android:id="@+id/q5contentLayout"
+                            android:tag="4"
                             android:visibility="gone"
                             android:paddingTop="10dp"
                             android:paddingLeft="20dp"
