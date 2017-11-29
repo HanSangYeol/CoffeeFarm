@@ -10,8 +10,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import com.coffee_farm.www.coffeefarm.QNAActivity;
-import com.coffee_farm.www.coffeefarm.QuestionActivity;
 import com.coffee_farm.www.coffeefarm.R;
 
 import de.hdodenhof.circleimageview.CircleImageView;

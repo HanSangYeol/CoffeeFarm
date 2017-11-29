@@ -7,4 +7,6 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="title_activity_category_detail">CategoryDetailActivity</string>
+    <string name="title_activity_question">QuestionActivity</string>
+    <string name="title_activity_qna">QNAActivity</string>
 </resources>
