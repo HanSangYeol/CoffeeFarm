@@ -77,94 +77,50 @@ public class QuestionFragment extends Fragment {
 
     private void setupEvents() {
 
-        View.OnClickListener showClickListener =  new View.OnClickListener() {
+        View.OnClickListener visibleClickListener =  new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ImageView[] visibel = {q1visibleBtn, q2visibleBtn, q3visibleBtn, q4visibleBtn, q5visibleBtn};
-                ImageView[] gone = {q1goneBtn, q2goneBtn, q2goneBtn, q2goneBtn, q2goneBtn};
+                ImageView[] visible = {q1visibleBtn, q2visibleBtn, q3visibleBtn, q4visibleBtn, q5visibleBtn};
+                ImageView[] gone = {q1goneBtn, q2goneBtn, q3goneBtn, q4goneBtn, q5goneBtn};
+                LinearLayout[] contentLayout = {q1contentLayout, q2contentLayout, q3contentLayout, q4contentLayout, q5contentLayout};
+
+                int index = Integer.parseInt(view.getTag().toString());
+
+                visible[index].setVisibility(View.GONE);
+                gone[index].setVisibility(View.VISIBLE);
+                contentLayout[index].setVisibility(View.VISIBLE);
+            }
+        };
+        View.OnClickListener goneClickListener =  new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ImageView[] visible = {q1visibleBtn, q2visibleBtn, q3visibleBtn, q4visibleBtn, q5visibleBtn};
+                ImageView[] gone = {q1goneBtn, q2goneBtn, q3goneBtn, q4goneBtn, q5goneBtn};
+                LinearLayout[] contentLayout = {q1contentLayout, q2contentLayout, q3contentLayout, q4contentLayout, q5contentLayout};
+
+                int index = Integer.parseInt(view.getTag().toString());
+
+                visible[index].setVisibility(View.VISIBLE);
+                gone[index].setVisibility(View.GONE);
+                contentLayout[index].setVisibility(View.GONE);
             }
         };
 
-        q1visibleBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                q1visibleBtn.setVisibility(View.GONE);
-                q1goneBtn.setVisibility(View.VISIBLE);
-                q1contentLayout.setVisibility(View.VISIBLE);
-            }
-        });
-        q1goneBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                q1visibleBtn.setVisibility(View.VISIBLE);
-                q1goneBtn.setVisibility(View.GONE);
-                q1contentLayout.setVisibility(View.GONE);
-            }
-        });
-        q2visibleBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                q2visibleBtn.setVisibility(View.GONE);
-                q2goneBtn.setVisibility(View.VISIBLE);
-                q2contentLayout.setVisibility(View.VISIBLE);
-            }
-        });
-        q2goneBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                q2visibleBtn.setVisibility(View.VISIBLE);
-                q2goneBtn.setVisibility(View.GONE);
-                q2contentLayout.setVisibility(View.GONE);
-            }
-        });
-        q3visibleBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                q3visibleBtn.setVisibility(View.GONE);
-                q3goneBtn.setVisibility(View.VISIBLE);
-                q3contentLayout.setVisibility(View.VISIBLE);
-            }
-        });
-        q3goneBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                q3visibleBtn.setVisibility(View.VISIBLE);
-                q3goneBtn.setVisibility(View.GONE);
-                q3contentLayout.setVisibility(View.GONE);
-            }
-        });
-        q4visibleBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                q4visibleBtn.setVisibility(View.GONE);
-                q4goneBtn.setVisibility(View.VISIBLE);
-                q4contentLayout.setVisibility(View.VISIBLE);
-            }
-        });
-        q4goneBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                q4visibleBtn.setVisibility(View.VISIBLE);
-                q4goneBtn.setVisibility(View.GONE);
-                q4contentLayout.setVisibility(View.GONE);
-            }
-        });
-        q5visibleBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                q5visibleBtn.setVisibility(View.GONE);
-                q5goneBtn.setVisibility(View.VISIBLE);
-                q5contentLayout.setVisibility(View.VISIBLE);
-            }
-        });
-        q5goneBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                q5visibleBtn.setVisibility(View.VISIBLE);
-                q5goneBtn.setVisibility(View.GONE);
-                q5contentLayout.setVisibility(View.GONE);
-            }
-        });
+        q1visibleBtn.setOnClickListener(visibleClickListener);
+        q1goneBtn.setOnClickListener(goneClickListener);
+
+        q2visibleBtn.setOnClickListener(visibleClickListener);
+        q2goneBtn.setOnClickListener(goneClickListener);
+
+        q3visibleBtn.setOnClickListener(visibleClickListener);
+        q3goneBtn.setOnClickListener(goneClickListener);
+
+        q4visibleBtn.setOnClickListener(visibleClickListener);
+        q4goneBtn.setOnClickListener(goneClickListener);
+
+        q5visibleBtn.setOnClickListener(visibleClickListener);
+        q5goneBtn.setOnClickListener(goneClickListener);
+
         questionImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
