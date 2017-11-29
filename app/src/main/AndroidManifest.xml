@@ -26,7 +26,9 @@
             android:label="@string/title_activity_my_page_detail" />
         <activity
             android:name=".CategoryRelationActivity"
-            android:label="@string/title_activity_category_detail"></activity>
+            android:label="@string/title_activity_category_detail" />
+        <activity android:name=".QuestionActivity" />
+        <activity android:name=".QNAActivity"></activity>
     </application>
 
 </manifest>
