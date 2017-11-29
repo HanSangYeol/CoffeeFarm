@@ -1,36 +1,215 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
     <LinearLayout
+        android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:gravity="center|left">
 
         <TextView
-            android:layout_marginLeft="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
             android:text="상품후기"
             android:textColor="@color/dark_gray"
             android:textSize="18sp"
             android:textStyle="bold" />
+
         <TextView
-            android:padding="10dp"
-            android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp"
             android:text="Product Reviews"
             android:textColor="@color/coffee_text"
-            android:textSize="12sp"/>
+            android:textSize="12sp" />
     </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/divider_brown_line" />
+
+    <LinearLayout
+        android:background="@drawable/shadow_box"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="[ 공지 ]"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="안녕하세요!! 커피팜 제품 사용 후기를 올려주세요!"
+                android:textSize="12sp"
+                android:textColor="@color/black" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <ImageView
+                android:id="@+id/visibleBtn"
+                android:layout_marginRight="5dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/arrow_down"/>
+            <ImageView
+                android:id="@+id/goneBtn"
+                android:layout_marginRight="5dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:visibility="gone"
+                android:src="@drawable/arrow_up"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/noticeLayout"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@mipmap/ic_launcher_round" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="bottom">
+
+                        <TextView
+                            android:id="@+id/nicknameTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="커피팜"
+                            android:textColor="@color/dark_gray" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:text="조회수"
+                            android:textColor="@color/divider_gray_line"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/viewsTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15dp"
+                            android:text="5321"
+                            android:textColor="@color/divider_gray_line"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="top">
+
+                        <TextView
+                            android:id="@+id/dateTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="2011.06.15"
+                            android:textColor="@color/divider_gray_line"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="안녕하세요!! 커피팜 제품 사용 후기를 올려주세요!"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="커피용품의 사용후기나 커피맛에 관하여
+
+
+고객님들의 견해에 항상 귀를 기울이고 있습니다!"
+                        android:textColor="@color/divider_gray_line" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/reviewListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="0dp"
+        android:divider="@null">
+
+    </ListView>
+
 
 </LinearLayout>

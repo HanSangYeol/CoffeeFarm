@@ -4,7 +4,24 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical">
-
+    <LinearLayout
+        android:background="@color/white"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="카테고리"
+            android:textColor="@color/dark_gray"
+            android:textStyle="bold"
+            android:textSize="18sp"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider_brown_line"/>
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -449,7 +466,7 @@
                     <TextView
                         android:layout_width="1dp"
                         android:layout_height="match_parent"
-                        android:background="@color/dark_gray"/>
+                        android:background="@color/soft_gray"/>
                     <LinearLayout
                         android:padding="2dp"
                         android:layout_width="0dp"
