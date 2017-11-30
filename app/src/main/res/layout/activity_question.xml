@@ -35,10 +35,15 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/divider_brown_line" />
-    <TextView
+    <ListView
+        android:id="@+id/questionListView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"/>
+        android:layout_weight="1"
+        android:dividerHeight="0dp"
+        android:divider="@null">
+
+    </ListView>
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/bottomTab"

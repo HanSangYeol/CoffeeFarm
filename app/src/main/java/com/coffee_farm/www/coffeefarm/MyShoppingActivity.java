@@ -5,39 +5,35 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.view.MenuItem;
-import android.widget.ListView;
+import android.widget.LinearLayout;
 
-import com.coffee_farm.www.coffeefarm.Adapter.QuestionAdapter;
-import com.coffee_farm.www.coffeefarm.Data.Question;
-
-import java.util.List;
-
-public class QuestionActivity extends BaseActivity {
+public class MyShoppingActivity extends BaseActivity {
 
 
     private BottomNavigationView bottomTab;
-    QuestionAdapter questionAdapter;
-    List<Question> questionList;
-    private android.widget.ListView questionListView;
+    private android.widget.LinearLayout orderinquiryLayout;
+    private android.widget.LinearLayout itemofinterestLayout;
+    private android.widget.LinearLayout canceledinquiryLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_question);
+        setContentView(R.layout.activity_my_shopping);
         bindView();
         setupEvents();
         setValues();
-
 
     }
 
     @Override
     public void setValues() {
 
-        questionAdapter = new QuestionAdapter(mContext, questionList);
-        questionListView.setAdapter(questionAdapter);
+    }
 
-        bottomTab.setSelectedItemId(R.id.navigation_kategorie);
+    @Override
+    public void setupEvents() {
+
+        bottomTab.setSelectedItemId(R.id.navigation_mypage);
         bottomTab.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -66,10 +62,6 @@ public class QuestionActivity extends BaseActivity {
             }
         });
 
-    }
-
-    @Override
-    public void setupEvents() {
 
     }
 
@@ -77,7 +69,9 @@ public class QuestionActivity extends BaseActivity {
     public void bindView() {
 
         this.bottomTab = (BottomNavigationView) findViewById(R.id.bottomTab);
-        this.questionListView = (ListView) findViewById(R.id.questionListView);
+        this.canceledinquiryLayout = (LinearLayout) findViewById(R.id.canceledinquiryLayout);
+        this.itemofinterestLayout = (LinearLayout) findViewById(R.id.itemofinterestLayout);
+        this.orderinquiryLayout = (LinearLayout) findViewById(R.id.orderinquiryLayout);
 
     }
 }

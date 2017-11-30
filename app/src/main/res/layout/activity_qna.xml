@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="상품문의게시판"
+            android:text="상품문의 게시판"
             android:textColor="@color/dark_gray"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -35,10 +35,15 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/divider_brown_line" />
-    <TextView
+    <ListView
+        android:id="@+id/qnaListView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"/>
+        android:layout_weight="1"
+        android:dividerHeight="0dp"
+        android:divider="@null">
+
+    </ListView>
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/bottomTab"

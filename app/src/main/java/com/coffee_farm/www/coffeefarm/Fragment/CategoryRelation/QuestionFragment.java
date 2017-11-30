@@ -146,15 +146,9 @@ public class QuestionFragment extends Fragment {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == REQUEST_ACTIVITY){
             if (resultCode == Activity.RESULT_OK){
+                getActivity().setResult(Activity.RESULT_OK, data);
                 getActivity().finish();
-                int RETURN_ACTIVITY = data.getIntExtra("return_home", 0);
-                if (RETURN_ACTIVITY == 0){
-                    ((MainActivity)getActivity()).bottomTab.setSelectedItemId(R.id.navigation_home);
-                }else if (RETURN_ACTIVITY == 1){
-                    ((MainActivity)getActivity()).bottomTab.setSelectedItemId(R.id.navigation_kategorie);
-                }else {
-                    ((MainActivity)getActivity()).bottomTab.setSelectedItemId(R.id.navigation_mypage);
-                }
+
             }
         }
     }

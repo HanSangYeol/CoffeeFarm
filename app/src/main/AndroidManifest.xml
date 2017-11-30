@@ -22,7 +22,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MyPageRelationActivity"
+            android:name=".MyShoppingActivity"
             android:label="@string/title_activity_my_page_detail" />
         <activity
             android:name=".CategoryRelationActivity"
