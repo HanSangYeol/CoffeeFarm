@@ -2,7 +2,8 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/white">
 
     <LinearLayout
         android:background="@color/white"
@@ -33,5 +34,13 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/divider_brown_line" />
+    <ListView
+        android:id="@+id/cafeListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="0dp"
+        android:divider="@null">
+
+    </ListView>
 
 </LinearLayout>
