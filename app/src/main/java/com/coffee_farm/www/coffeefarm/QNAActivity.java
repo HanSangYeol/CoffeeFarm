@@ -1,14 +1,12 @@
 package com.coffee_farm.www.coffeefarm;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
-import android.support.v7.app.AppCompatActivity;
-import android.view.MenuItem;
-import android.widget.TextView;
 
 public class QNAActivity extends BaseActivity {
 
+
+    private BottomNavigationView bottomTab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +30,8 @@ public class QNAActivity extends BaseActivity {
 
     @Override
     public void bindView() {
+
+        this.bottomTab = (BottomNavigationView) findViewById(R.id.bottomTab);
 
     }
 }

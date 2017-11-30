@@ -1,5 +1,6 @@
 package com.coffee_farm.www.coffeefarm.Fragment.CategoryRelation;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -10,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.coffee_farm.www.coffeefarm.MainActivity;
 import com.coffee_farm.www.coffeefarm.QNAActivity;
 import com.coffee_farm.www.coffeefarm.QuestionActivity;
 import com.coffee_farm.www.coffeefarm.R;
@@ -21,6 +23,8 @@ import de.hdodenhof.circleimageview.CircleImageView;
  */
 
 public class QuestionFragment extends Fragment {
+
+    int REQUEST_ACTIVITY = 1001;
 
     private de.hdodenhof.circleimageview.CircleImageView questionImg;
     private de.hdodenhof.circleimageview.CircleImageView qnaImg;
@@ -125,7 +129,7 @@ public class QuestionFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), QuestionActivity.class);
-                startActivity(intent);
+                startActivityForResult(intent, REQUEST_ACTIVITY);
             }
         });
         qnaImg.setOnClickListener(new View.OnClickListener() {
@@ -135,5 +139,23 @@ public class QuestionFragment extends Fragment {
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REQUEST_ACTIVITY){
+            if (resultCode == Activity.RESULT_OK){
+                getActivity().finish();
+                int RETURN_ACTIVITY = data.getIntExtra("return_home", 0);
+                if (RETURN_ACTIVITY == 0){
+                    ((MainActivity)getActivity()).bottomTab.setSelectedItemId(R.id.navigation_home);
+                }else if (RETURN_ACTIVITY == 1){
+                    ((MainActivity)getActivity()).bottomTab.setSelectedItemId(R.id.navigation_kategorie);
+                }else {
+                    ((MainActivity)getActivity()).bottomTab.setSelectedItemId(R.id.navigation_mypage);
+                }
+            }
+        }
     }
 }

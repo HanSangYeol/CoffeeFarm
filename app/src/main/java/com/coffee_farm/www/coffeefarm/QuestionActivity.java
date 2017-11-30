@@ -1,44 +1,71 @@
 package com.coffee_farm.www.coffeefarm;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
-import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
-import android.widget.TextView;
 
-public class QuestionActivity extends AppCompatActivity {
+public class QuestionActivity extends BaseActivity {
 
-    private TextView mTextMessage;
 
-    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
-            = new BottomNavigationView.OnNavigationItemSelectedListener() {
-
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            switch (item.getItemId()) {
-                case R.id.navigation_home:
-                    mTextMessage.setText(R.string.title_home);
-                    return true;
-                case R.id.navigation_kategorie:
-                    mTextMessage.setText(R.string.title_dashboard);
-                    return true;
-                case R.id.navigation_mypage:
-                    mTextMessage.setText(R.string.title_notifications);
-                    return true;
-            }
-            return false;
-        }
-    };
+    private BottomNavigationView bottomTab;
+    private android.widget.LinearLayout container;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question);
+        bindView();
+        setupEvents();
+        setValues();
 
-        mTextMessage = (TextView) findViewById(R.id.message);
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
-        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
     }
 
+    @Override
+    public void setValues() {
+
+        bottomTab.setSelectedItemId(R.id.navigation_kategorie);
+        bottomTab.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.navigation_home:
+                        Intent intent = new Intent();
+                        intent.putExtra("return_home", 0);
+                        setResult(RESULT_OK, intent);
+                        finish();
+                        return true;
+                    case R.id.navigation_kategorie:
+                        intent = new Intent();
+                        intent.putExtra("return_home", 1);
+                        setResult(RESULT_OK, intent);
+                        finish();
+                        return true;
+                    case R.id.navigation_mypage:
+                        intent = new Intent();
+                        intent.putExtra("return_home", 2);
+                        setResult(RESULT_OK, intent);
+                        finish();
+                        return true;
+                }
+
+                return false;
+            }
+        });
+
+    }
+
+    @Override
+    public void setupEvents() {
+
+    }
+
+    @Override
+    public void bindView() {
+
+        this.bottomTab = (BottomNavigationView) findViewById(R.id.bottomTab);
+
+    }
 }
