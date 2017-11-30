@@ -5,9 +5,12 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.LinearLayout;
 
 public class MyShoppingActivity extends BaseActivity {
+
+    int RESULT_NUM = 0;
 
 
     private BottomNavigationView bottomTab;
@@ -19,6 +22,7 @@ public class MyShoppingActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_shopping);
+        RESULT_NUM = getIntent().getIntExtra("myshoppingNumbering", 0);
         bindView();
         setupEvents();
         setValues();
@@ -27,6 +31,16 @@ public class MyShoppingActivity extends BaseActivity {
 
     @Override
     public void setValues() {
+
+
+        LinearLayout[] layout = {orderinquiryLayout, itemofinterestLayout, canceledinquiryLayout};
+
+        for (LinearLayout linearLayout : layout){
+            linearLayout.setVisibility(View.GONE);
+        }
+
+        layout[RESULT_NUM].setVisibility(View.VISIBLE);
+
 
     }
 

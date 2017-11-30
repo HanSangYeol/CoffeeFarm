@@ -7,8 +7,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 
-import com.coffee_farm.www.coffeefarm.Data.Cancel;
+import com.bumptech.glide.Glide;
+import com.coffee_farm.www.coffeefarm.Data.Cafe;
 import com.coffee_farm.www.coffeefarm.Data.Order;
 import com.coffee_farm.www.coffeefarm.R;
 
@@ -18,14 +20,15 @@ import java.util.List;
  * Created by the on 2017-11-30.
  */
 
-public class CancelAdapter extends ArrayAdapter<Cancel> {
+public class OrderAdapter extends ArrayAdapter<Order>{
+
 
     Context mContext;
-    List<Cancel> mList;
+    List<Order> mList;
     LayoutInflater inf;
 
-    public CancelAdapter(Context context, List<Cancel> list){
-        super(context, R.layout.cancel_list_item, list);
+    public OrderAdapter(Context context, List<Order> list){
+        super(context, R.layout.order_list_item, list);
         mContext = context;
         mList = list;
         inf = LayoutInflater.from(mContext);
@@ -37,7 +40,7 @@ public class CancelAdapter extends ArrayAdapter<Cancel> {
         View row = convertView;
 
         if (row == null){
-            row = inf.inflate(R.layout.cancel_list_item, null);
+            row = inf.inflate(R.layout.order_list_item, null);
         }
 
         return row;

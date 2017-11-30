@@ -10,13 +10,20 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
+import com.coffee_farm.www.coffeefarm.Adapter.OrderAdapter;
+import com.coffee_farm.www.coffeefarm.Data.Order;
 import com.coffee_farm.www.coffeefarm.R;
+
+import java.util.List;
 
 /**
  * Created by the on 2017-11-30.
  */
 
 public class OrderInquiryFragment extends Fragment {
+
+    OrderAdapter orderAdapter;
+    List<Order> orderList;
 
     private android.widget.ImageView detailvisibleBtn;
     private android.widget.ImageView detailgoneBtn;
@@ -51,6 +58,9 @@ public class OrderInquiryFragment extends Fragment {
     }
 
     private void setValues() {
+
+        orderAdapter = new OrderAdapter(getActivity(), orderList);
+        orderListView.setAdapter(orderAdapter);
     }
 
     private void setupEvents() {

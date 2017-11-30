@@ -10,13 +10,20 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
+import com.coffee_farm.www.coffeefarm.Adapter.CancelAdapter;
+import com.coffee_farm.www.coffeefarm.Data.Cancel;
 import com.coffee_farm.www.coffeefarm.R;
+
+import java.util.List;
 
 /**
  * Created by the on 2017-11-30.
  */
 
 public class CanceledInquiryFragment extends Fragment {
+
+    CancelAdapter cancelAdapter;
+    List<Cancel> cancelList;
 
     private android.widget.ImageView detailvisibleBtn;
     private android.widget.ImageView detailgoneBtn;
@@ -45,6 +52,18 @@ public class CanceledInquiryFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        setupEvents();
+        setValues();
+
+    }
+
+    private void setValues() {
+        cancelAdapter = new CancelAdapter(getActivity(), cancelList);
+        cancelListView.setAdapter(cancelAdapter);
+
+    }
+
+    private void setupEvents() {
 
         View.OnClickListener visibleClickListener =  new View.OnClickListener() {
             @Override

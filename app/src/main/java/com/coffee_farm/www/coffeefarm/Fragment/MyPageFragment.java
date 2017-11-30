@@ -45,16 +45,21 @@ public class MyPageFragment extends Fragment {
     }
 
     private void setValues() {
-        orderinquiryBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), MyShoppingActivity.class);
-                startActivityForResult(intent, REQUEST_ACTIVITY);
-            }
-        });
+
     }
 
     private void setupEvents() {
+        View.OnClickListener clickListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), MyShoppingActivity.class);
+                intent.putExtra("myshoppingNumbering", Integer.parseInt(view.getTag().toString()));
+                startActivityForResult(intent, REQUEST_ACTIVITY);
+            }
+        };
+        orderinquiryBtn.setOnClickListener(clickListener);
+        itemofinterestBtn.setOnClickListener(clickListener);
+        canceledinquiryBtn.setOnClickListener(clickListener);
     }
 
     @Override
