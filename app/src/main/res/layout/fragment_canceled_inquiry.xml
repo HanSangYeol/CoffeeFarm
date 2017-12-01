@@ -31,6 +31,7 @@
         android:layout_height="1dp"
         android:background="@color/divider_brown_line" />
     <LinearLayout
+        android:layout_marginTop="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -70,6 +71,7 @@
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/detailLayout"
+                android:visibility="gone"
                 android:layout_marginTop="10dp"
                 android:tag="0"
                 android:gravity="center|left"
@@ -147,6 +149,7 @@
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/easyLayout"
+                android:visibility="gone"
                 android:tag="1"
                 android:orientation="vertical"
                 android:layout_width="match_parent"

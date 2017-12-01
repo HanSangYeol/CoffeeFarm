@@ -11,6 +11,70 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
+        <LinearLayout
+            android:id="@+id/onetooneconsultingLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <fragment
+                android:id="@+id/onetooneconsultingFragment"
+                class="com.coffee_farm.www.coffeefarm.Fragment.MySpace.OneToOneConsulting"
+                tools:layout="@layout/fragment_onetooneconsulting"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mycouponLayout"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <fragment
+                android:id="@+id/mycouponFragment"
+                class="com.coffee_farm.www.coffeefarm.Fragment.MySpace.MyCoupon"
+                tools:layout="@layout/fragment_mycoupon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/savedmoneyLayout"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <fragment
+                android:id="@+id/savedmoneyFragment"
+                class="com.coffee_farm.www.coffeefarm.Fragment.MySpace.Savedmoney"
+                tools:layout="@layout/fragment_savedmoney"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pointLayout"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <fragment
+                android:id="@+id/pointFragment"
+                class="com.coffee_farm.www.coffeefarm.Fragment.MySpace.Point"
+                tools:layout="@layout/fragment_point"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/offlinecouponLayout"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <fragment
+                android:id="@+id/offlinecouponFragment"
+                class="com.coffee_farm.www.coffeefarm.Fragment.MySpace.OffLineCoupon"
+                tools:layout="@layout/fragment_offlinecoupon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
 
     </FrameLayout>
 

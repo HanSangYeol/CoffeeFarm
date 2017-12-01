@@ -338,6 +338,8 @@
                         android:background="@color/divider_brown_line"/>
 
                     <LinearLayout
+                        android:id="@+id/consultingBtn"
+                        android:tag="0"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
@@ -364,6 +366,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/myconsultingBtn"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
@@ -390,6 +393,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/estimateconsultingBtn"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
@@ -416,6 +420,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/myreviewsBtn"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
@@ -442,6 +447,8 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/couponBtn"
+                        android:tag="1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
@@ -468,6 +475,8 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/savedmoneyBtn"
+                        android:tag="2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
@@ -494,6 +503,8 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/pointBtn"
+                        android:tag="3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
@@ -520,6 +531,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/personalpaymentBtn"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
@@ -546,6 +558,8 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/offlinecouponBtn"
+                        android:tag="4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
