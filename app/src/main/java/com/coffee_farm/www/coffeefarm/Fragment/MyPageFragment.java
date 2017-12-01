@@ -127,6 +127,9 @@ public class MyPageFragment extends Fragment {
         pointBtn.setOnClickListener(myspaceListener);
         personalpaymentBtn.setOnClickListener(preparingListener);
         offlinecouponBtn.setOnClickListener(myspaceListener);
+        taxcalculationBtn.setOnClickListener(taxListener);
+        editmembershipinfoBtn.setOnClickListener(myinfoListener);
+        withdrawalBtn.setOnClickListener(myinfoListener);
 
     }
 

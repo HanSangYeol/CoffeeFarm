@@ -11,4 +11,5 @@
     <string name="title_activity_qna">QNAActivity</string>
     <string name="title_activity_my_space">MySpaceActivity</string>
     <string name="title_activity_my_info">MyInfoActivity</string>
+    <string name="title_activity_shopping_basket">ShoppingBasketActivity</string>
 </resources>

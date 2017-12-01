@@ -7,5 +7,12 @@
         <item>높은가격순</item>
         <item>낮은가격순</item>
     </string-array>
+    <string-array name="withdrawalreason">
+        <item>상품품질 불만족</item>
+        <item>서비스 불만족</item>
+        <item>사이트 이용불편</item>
+        <item>배송 주문 불만족</item>
+        <item>기타</item>
+    </string-array>
 
 </resources>

@@ -22,7 +22,7 @@
             android:layout_height="30dp"
             android:layout_gravity="center|right"
             android:layout_marginRight="10dp"
-            android:src="@mipmap/ic_launcher" />
+            android:src="@drawable/shopping_basket" />
     </FrameLayout>
 
     <android.support.design.widget.TabLayout

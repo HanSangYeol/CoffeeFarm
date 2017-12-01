@@ -30,7 +30,7 @@
             android:layout_height="30dp"
             android:layout_gravity="center|right"
             android:layout_marginRight="10dp"
-            android:src="@mipmap/ic_launcher" />
+            android:src="@drawable/shopping_basket" />
     </FrameLayout>
 
     <TextView
@@ -689,6 +689,7 @@
 
                         <LinearLayout
                             android:id="@+id/editmembershipinfoBtn"
+                            android:tag="0"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
@@ -716,6 +717,7 @@
 
                         <LinearLayout
                             android:id="@+id/withdrawalBtn"
+                            android:tag="1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"

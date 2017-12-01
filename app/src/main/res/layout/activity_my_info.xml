@@ -11,6 +11,30 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
+        <LinearLayout
+            android:id="@+id/editmembershipinfoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <fragment
+                android:id="@+id/editmembershipinfoFragment"
+                class="com.coffee_farm.www.coffeefarm.Fragment.MyInfo.EditMembershipInfoFragment"
+                tools:layout="@layout/fragment_editmembershipinfo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/withdrawalLayout"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <fragment
+                android:id="@+id/withdrawalFragment"
+                class="com.coffee_farm.www.coffeefarm.Fragment.MyInfo.WithdrawalFragment"
+                tools:layout="@layout/fragment_withdrawal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
 
     </FrameLayout>
 

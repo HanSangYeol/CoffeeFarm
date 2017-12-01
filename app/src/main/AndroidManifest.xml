@@ -38,7 +38,10 @@
             android:label="@string/title_activity_my_space" />
         <activity
             android:name=".MyInfoActivity"
-            android:label="@string/title_activity_my_info"></activity>
+            android:label="@string/title_activity_my_info" />
+        <activity
+            android:name=".ShoppingBasketActivity"
+            android:label="@string/title_activity_shopping_basket"></activity>
     </application>
 
 </manifest>
