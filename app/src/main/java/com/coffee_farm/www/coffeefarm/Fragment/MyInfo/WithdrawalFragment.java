@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.Spinner;
 
 import com.coffee_farm.www.coffeefarm.R;
@@ -18,11 +19,13 @@ import com.coffee_farm.www.coffeefarm.R;
 public class WithdrawalFragment extends Fragment {
 
     private android.widget.Spinner withdrawalSpinner;
+    private android.widget.ImageView backBtn;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_withdrawal, container, false);
+        this.backBtn = (ImageView) view.findViewById(R.id.backBtn);
         this.withdrawalSpinner = (Spinner) view.findViewById(R.id.withdrawalSpinner);
         return view;
     }
@@ -45,5 +48,11 @@ public class WithdrawalFragment extends Fragment {
     }
 
     private void setupEvents() {
+        backBtn.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            getActivity().finish();
+        }
+    });
     }
 }

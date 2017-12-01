@@ -33,11 +33,13 @@ public class ProductReviewsFragment extends Fragment {
     private android.widget.TextView dateTxt;
     private android.widget.LinearLayout noticeLayout;
     private android.widget.ListView reviewListView;
+    private ImageView backBtn;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_productreviews, container, false);
+        this.backBtn = (ImageView) view.findViewById(R.id.backBtn);
         this.reviewListView = (ListView) view.findViewById(R.id.reviewListView);
         this.noticeLayout = (LinearLayout) view.findViewById(R.id.noticeLayout);
         this.dateTxt = (TextView) view.findViewById(R.id.dateTxt);
@@ -59,12 +61,18 @@ public class ProductReviewsFragment extends Fragment {
 
         // TODO - ListView ViewType 참조조
 
-       reviewAdapter =  new ReviewAdapter(getActivity(), reviewList);
+        reviewAdapter = new ReviewAdapter(getActivity(), reviewList);
         reviewListView.setAdapter(reviewAdapter);
 
     }
 
     private void setupEvents() {
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().finish();
+            }
+        });
         visibleBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

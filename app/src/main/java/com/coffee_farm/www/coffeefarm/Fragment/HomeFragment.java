@@ -7,14 +7,14 @@ import android.support.design.widget.TabItem;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
+import android.widget.ImageView;
 
 import com.coffee_farm.www.coffeefarm.Adapter.HomeFragmentAdapter;
 import com.coffee_farm.www.coffeefarm.R;
+import com.coffee_farm.www.coffeefarm.ShoppingBasketActivity;
 
 /**
  * Created by the on 2017-11-22.
@@ -35,11 +35,13 @@ public class HomeFragment extends Fragment {
     private android.support.design.widget.TabLayout tabLayout;
 
     public static HomeFragment homeFragment;
+    private android.widget.ImageView shoppingbasketBtn;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
+        this.shoppingbasketBtn = (ImageView) view.findViewById(R.id.shoppingbasketBtn);
         this.tabLayout = (TabLayout) view.findViewById(R.id.tabLayout);
         this.viewpager = (ViewPager) view.findViewById(R.id.viewpager);
         this.tabItem9 = (TabItem) view.findViewById(R.id.tabItem9);
@@ -58,7 +60,19 @@ public class HomeFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        setupEvents();
         setValues();
+    }
+
+    private void setupEvents() {
+
+        shoppingbasketBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), ShoppingBasketActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void setValues() {

@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -16,6 +17,7 @@ import com.coffee_farm.www.coffeefarm.MyInfoActivity;
 import com.coffee_farm.www.coffeefarm.MyShoppingActivity;
 import com.coffee_farm.www.coffeefarm.MySpaceActivity;
 import com.coffee_farm.www.coffeefarm.R;
+import com.coffee_farm.www.coffeefarm.ShoppingBasketActivity;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -43,11 +45,13 @@ public class MyPageFragment extends Fragment {
     private LinearLayout taxcalculationBtn;
     private LinearLayout editmembershipinfoBtn;
     private LinearLayout withdrawalBtn;
+    private android.widget.ImageView shoppingbasketBtn;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_mypage, container, false);
+        this.shoppingbasketBtn = (ImageView) view.findViewById(R.id.shoppingbasketBtn);
         this.withdrawalBtn = (LinearLayout) view.findViewById(R.id.withdrawalBtn);
         this.editmembershipinfoBtn = (LinearLayout) view.findViewById(R.id.editmembershipinfoBtn);
         this.taxcalculationBtn = (LinearLayout) view.findViewById(R.id.taxcalculationBtn);
@@ -79,6 +83,13 @@ public class MyPageFragment extends Fragment {
     }
 
     private void setupEvents() {
+        shoppingbasketBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), ShoppingBasketActivity.class);
+                startActivity(intent);
+            }
+        });
         View.OnClickListener myshoppingListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {

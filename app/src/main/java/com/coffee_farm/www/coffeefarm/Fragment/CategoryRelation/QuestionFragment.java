@@ -11,7 +11,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import com.coffee_farm.www.coffeefarm.MainActivity;
 import com.coffee_farm.www.coffeefarm.QNAActivity;
 import com.coffee_farm.www.coffeefarm.QuestionActivity;
 import com.coffee_farm.www.coffeefarm.R;
@@ -43,11 +42,13 @@ public class QuestionFragment extends Fragment {
     private android.widget.ImageView q5visibleBtn;
     private android.widget.ImageView q5goneBtn;
     private android.widget.LinearLayout q5contentLayout;
+    private ImageView backBtn;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_question, container, false);
+        this.backBtn = (ImageView) view.findViewById(R.id.backBtn);
         this.q5contentLayout = (LinearLayout) view.findViewById(R.id.q5contentLayout);
         this.q5goneBtn = (ImageView) view.findViewById(R.id.q5goneBtn);
         this.q5visibleBtn = (ImageView) view.findViewById(R.id.q5visibleBtn);
@@ -80,6 +81,12 @@ public class QuestionFragment extends Fragment {
     }
 
     private void setupEvents() {
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().finish();
+            }
+        });
 
         View.OnClickListener visibleClickListener =  new View.OnClickListener() {
             @Override

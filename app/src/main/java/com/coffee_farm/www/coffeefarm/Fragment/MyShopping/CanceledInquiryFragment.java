@@ -32,11 +32,13 @@ public class CanceledInquiryFragment extends Fragment {
     private android.widget.ImageView easygoneBtn;
     private android.widget.LinearLayout easyLayout;
     private android.widget.ListView cancelListView;
+    private ImageView backBtn;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_canceled_inquiry, container, false);
+        this.backBtn = (ImageView) view.findViewById(R.id.backBtn);
         this.cancelListView = (ListView) view.findViewById(R.id.cancelListView);
         this.easyLayout = (LinearLayout) view.findViewById(R.id.easyLayout);
         this.easygoneBtn = (ImageView) view.findViewById(R.id.easygoneBtn);
@@ -64,8 +66,14 @@ public class CanceledInquiryFragment extends Fragment {
     }
 
     private void setupEvents() {
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().finish();
+            }
+        });
 
-        View.OnClickListener visibleClickListener =  new View.OnClickListener() {
+        View.OnClickListener visibleClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 ImageView[] visible = {detailvisibleBtn, easyvisibleBtn};
@@ -79,7 +87,7 @@ public class CanceledInquiryFragment extends Fragment {
                 contentLayout[index].setVisibility(View.VISIBLE);
             }
         };
-        View.OnClickListener goneClickListener =  new View.OnClickListener() {
+        View.OnClickListener goneClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 ImageView[] visible = {detailvisibleBtn, easyvisibleBtn};

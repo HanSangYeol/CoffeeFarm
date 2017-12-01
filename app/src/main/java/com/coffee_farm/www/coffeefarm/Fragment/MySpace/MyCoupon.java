@@ -32,11 +32,13 @@ public class MyCoupon extends Fragment {
     private android.widget.LinearLayout easyLayout;
     private android.widget.ListView cancelListView;
     private ListView couponListView;
+    private ImageView backBtn;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_mycoupon, container, false);
+        this.backBtn = (ImageView) view.findViewById(R.id.backBtn);
         this.couponListView = (ListView) view.findViewById(R.id.couponListView);
         this.easyLayout = (LinearLayout) view.findViewById(R.id.easyLayout);
         this.easygoneBtn = (ImageView) view.findViewById(R.id.easygoneBtn);
@@ -63,6 +65,12 @@ public class MyCoupon extends Fragment {
     }
 
     private void setupEvents() {
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().finish();
+            }
+        });
         View.OnClickListener visibleClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {

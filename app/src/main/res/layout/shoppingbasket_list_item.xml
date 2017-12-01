@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_margin="5dp"
+        android:background="@color/white"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="상품 이름"/>
+       </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+           <ImageView
+               android:layout_width="100dp"
+               android:layout_height="100dp"
+               android:src="@drawable/box_round_text"/>
+            <LinearLayout
+                android:layout_marginLeft="10dp"
+                android:gravity="center|left"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/soft_black"
+                        android:text="10000"
+                        android:textSize="18sp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/soft_black"
+                        android:text="원"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:paddingTop="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingBottom="10dp"
+                        android:paddingRight="20dp"
+                        android:background="@drawable/box_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:text="삭제"/>
+                    <EditText
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/box_text"
+                        android:inputType="number"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingBottom="10dp"
+                        android:paddingRight="20dp"
+                        android:layout_width="100dp"
+                        android:layout_height="40dp" />
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
