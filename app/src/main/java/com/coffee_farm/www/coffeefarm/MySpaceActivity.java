@@ -24,7 +24,7 @@ public class MySpaceActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_space);
-        RESULT_NUM = getIntent().getIntExtra("myshoppingNumbering", 0);
+        RESULT_NUM = getIntent().getIntExtra("myspaceNumbering", 0);
         bindView();
         setupEvents();
         setValues();

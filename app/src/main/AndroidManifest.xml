@@ -35,7 +35,10 @@
             android:label="@string/title_activity_qna" />
         <activity
             android:name=".MySpaceActivity"
-            android:label="@string/title_activity_my_space"></activity>
+            android:label="@string/title_activity_my_space" />
+        <activity
+            android:name=".MyInfoActivity"
+            android:label="@string/title_activity_my_info"></activity>
     </application>
 
 </manifest>

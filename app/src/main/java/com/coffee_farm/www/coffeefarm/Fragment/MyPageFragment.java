@@ -12,6 +12,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.coffee_farm.www.coffeefarm.MainActivity;
+import com.coffee_farm.www.coffeefarm.MyInfoActivity;
 import com.coffee_farm.www.coffeefarm.MyShoppingActivity;
 import com.coffee_farm.www.coffeefarm.MySpaceActivity;
 import com.coffee_farm.www.coffeefarm.R;
@@ -39,11 +40,17 @@ public class MyPageFragment extends Fragment {
     private android.widget.LinearLayout pointBtn;
     private android.widget.LinearLayout personalpaymentBtn;
     private android.widget.LinearLayout offlinecouponBtn;
+    private LinearLayout taxcalculationBtn;
+    private LinearLayout editmembershipinfoBtn;
+    private LinearLayout withdrawalBtn;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_mypage, container, false);
+        this.withdrawalBtn = (LinearLayout) view.findViewById(R.id.withdrawalBtn);
+        this.editmembershipinfoBtn = (LinearLayout) view.findViewById(R.id.editmembershipinfoBtn);
+        this.taxcalculationBtn = (LinearLayout) view.findViewById(R.id.taxcalculationBtn);
         this.offlinecouponBtn = (LinearLayout) view.findViewById(R.id.offlinecouponBtn);
         this.personalpaymentBtn = (LinearLayout) view.findViewById(R.id.personalpaymentBtn);
         this.pointBtn = (LinearLayout) view.findViewById(R.id.pointBtn);
@@ -84,7 +91,15 @@ public class MyPageFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), MySpaceActivity.class);
-                intent.putExtra("myshoppingNumbering", Integer.parseInt(view.getTag().toString()));
+                intent.putExtra("myspaceNumbering", Integer.parseInt(view.getTag().toString()));
+                startActivityForResult(intent, REQUEST_ACTIVITY);
+            }
+        };
+        View.OnClickListener myinfoListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), MyInfoActivity.class);
+                intent.putExtra("myinfoNumbering", Integer.parseInt(view.getTag().toString()));
                 startActivityForResult(intent, REQUEST_ACTIVITY);
             }
         };
@@ -92,6 +107,12 @@ public class MyPageFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getActivity(), "준비 중인 기능입니다", Toast.LENGTH_SHORT).show();
+            }
+        };
+        View.OnClickListener taxListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getActivity(), "세금 계산서 발행은 1:1문의로 문의해주세요", Toast.LENGTH_SHORT).show();
             }
         };
         orderinquiryBtn.setOnClickListener(myshoppingListener);

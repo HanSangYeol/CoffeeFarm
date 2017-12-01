@@ -624,6 +624,7 @@
                         android:orientation="vertical">
 
                         <LinearLayout
+                            android:id="@+id/taxcalculationBtn"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
@@ -687,6 +688,7 @@
                         android:orientation="vertical">
 
                         <LinearLayout
+                            android:id="@+id/editmembershipinfoBtn"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
@@ -713,6 +715,7 @@
                         </LinearLayout>
 
                         <LinearLayout
+                            android:id="@+id/withdrawalBtn"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
