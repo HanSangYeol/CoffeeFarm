@@ -36,7 +36,7 @@
         android:background="@color/divider_brown_line" />
 
     <LinearLayout
-        android:background="@drawable/shadow_box"
+        android:background="@drawable/box_shadow"
         android:layout_marginTop="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"

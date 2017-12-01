@@ -30,12 +30,13 @@
         android:layout_height="1dp"
         android:background="@color/divider_brown_line" />
     <LinearLayout
-        android:padding="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <LinearLayout
+            android:padding="10dp"
+            android:background="@drawable/box_text"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -46,7 +47,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="상세 기간을 조회하려면 누르세요"/>
+                    android:text="상세 기간 조회"/>
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -60,16 +61,17 @@
 
                 <ImageView
                     android:id="@+id/detailgoneBtn"
-                    android:tag="0"
                     android:visibility="gone"
+                    android:tag="0"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:src="@drawable/arrow_up"/>
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/detailLayout"
-                android:tag="0"
                 android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:tag="0"
                 android:gravity="center|left"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -111,6 +113,8 @@
             </LinearLayout>
         </LinearLayout>
         <LinearLayout
+            android:background="@drawable/box_text"
+            android:padding="10dp"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -121,7 +125,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="간편 검색으로 조회하려면 누르세요"/>
+                    android:text="간편 검색 조회"/>
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -143,12 +147,13 @@
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/easyLayout"
-                android:tag="1"
                 android:visibility="gone"
+                android:tag="1"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <RadioGroup
+                    android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
@@ -185,6 +190,7 @@
 
                 </RadioGroup>
                 <LinearLayout
+                    android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView

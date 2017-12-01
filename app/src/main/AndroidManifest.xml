@@ -32,7 +32,10 @@
             android:label="@string/title_activity_question" />
         <activity
             android:name=".QNAActivity"
-            android:label="@string/title_activity_qna"></activity>
+            android:label="@string/title_activity_qna" />
+        <activity
+            android:name=".MySpaceActivity"
+            android:label="@string/title_activity_my_space"></activity>
     </application>
 
 </manifest>
