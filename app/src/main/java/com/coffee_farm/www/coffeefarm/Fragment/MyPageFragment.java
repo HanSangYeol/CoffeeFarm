@@ -101,7 +101,7 @@ public class MyPageFragment extends Fragment {
         myconsultingBtn.setOnClickListener(preparingListener);
         estimateconsultingBtn.setOnClickListener(preparingListener);
         myreviewsBtn.setOnClickListener(preparingListener);
-        myconsultingBtn.setOnClickListener(myspaceListener);
+        couponBtn.setOnClickListener(myspaceListener);
         savedmoneyBtn.setOnClickListener(myspaceListener);
         pointBtn.setOnClickListener(myspaceListener);
         personalpaymentBtn.setOnClickListener(preparingListener);
