@@ -11,6 +11,7 @@ public class Teabag {
 
     private int id;
     private String title; // 이름
+    private String kind; // 카테고리
     private String title_Img; // 타이틀사진
     private int price; // 가격
     private String manufacturer; // 제조사
@@ -29,9 +30,10 @@ public class Teabag {
     public Teabag() {
     }
 
-    public Teabag(int id, String title, String title_Img, int price, String manufacturer, int saved_money, int distribution_cost, int asset_inventory_surplus, String grade, String country_of_origin, int count, boolean for_sale, List<String> product_picture, String product_detail_info) {
+    public Teabag(int id, String title, String kind, String title_Img, int price, String manufacturer, int saved_money, int distribution_cost, int asset_inventory_surplus, String grade, String country_of_origin, int count, boolean for_sale, List<String> product_picture, String product_detail_info) {
         this.id = id;
         this.title = title;
+        this.kind = kind;
         this.title_Img = title_Img;
         this.price = price;
         this.manufacturer = manufacturer;
@@ -44,6 +46,14 @@ public class Teabag {
         For_sale = for_sale;
         this.product_picture = product_picture;
         this.product_detail_info = product_detail_info;
+    }
+
+    public String getKind() {
+        return kind;
+    }
+
+    public void setKind(String kind) {
+        this.kind = kind;
     }
 
     public int getId() {

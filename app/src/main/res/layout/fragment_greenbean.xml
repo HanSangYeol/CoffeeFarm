@@ -19,6 +19,7 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/allview"
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:background="@color/soft_gray"
@@ -34,6 +35,8 @@
                     android:orientation="horizontal">
 
                     <TextView
+                        android:id="@+id/kind1"
+                        android:tag="0"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -42,6 +45,8 @@
                         android:textSize="12sp" />
 
                     <TextView
+                        android:id="@+id/kind2"
+                        android:tag="1"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -50,6 +55,8 @@
                         android:textSize="12sp" />
 
                     <TextView
+                        android:id="@+id/kind3"
+                        android:tag="2"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -67,6 +74,8 @@
                     android:orientation="horizontal">
 
                     <TextView
+                        android:id="@+id/kind4"
+                        android:tag="3"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -75,6 +84,8 @@
                         android:textSize="12sp" />
 
                     <TextView
+                        android:id="@+id/kind5"
+                        android:tag="4"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -83,6 +94,8 @@
                         android:textSize="12sp" />
 
                     <TextView
+                        android:id="@+id/kind6"
+                        android:tag="5"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
