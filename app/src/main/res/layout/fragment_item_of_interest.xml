@@ -26,15 +26,32 @@
             android:textStyle="bold" />
 
         <ImageView
+            android:id="@+id/cartBtn"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_gravity="center|right"
             android:layout_marginRight="10dp"
-            android:src="@mipmap/ic_launcher" />
+            android:src="@drawable/cart_icon" />
     </FrameLayout>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/divider_brown_line" />
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/exclamation_mark" />
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="준비중인 기능입니다."
+            android:textColor="@color/divider_gray_line"/>
+    </LinearLayout>
 
 </LinearLayout>
