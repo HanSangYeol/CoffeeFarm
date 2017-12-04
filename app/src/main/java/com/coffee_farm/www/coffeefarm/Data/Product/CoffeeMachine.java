@@ -1,13 +1,12 @@
 package com.coffee_farm.www.coffeefarm.Data.Product;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by the on 2017-12-04.
  */
 
-public class SetProductSet {
+public class CoffeeMachine {
 
     private int id;
     private String title; // 이름
@@ -18,14 +17,7 @@ public class SetProductSet {
     private int saved_money; // 적립금
     private int distribution_cost; // 배송비
     private int asset_inventory_surplus; // 재고수량
-    private String country_of_origin; // 원산지
-    private String grade; // 모델명
-//    private int select_option_1;
-//    private List<SetProductOption> option_1 = new ArrayList<>(); // 2중 1택
-//    private int select_option_2;
-//    private List<SetProductOption> option_2 = new ArrayList<>(); // 2중 1택
-//    private int beadstate;
-//    private List<SetProductOption> option_state = new ArrayList<>(); // 원두상태
+    private String country_of_origin; //
     private int count; // 수량
     private boolean For_sale; // 판매여부
 
@@ -33,10 +25,10 @@ public class SetProductSet {
 
     private String product_detail_info; // 제품상세정보
 
-    public SetProductSet() {
+    public CoffeeMachine() {
     }
 
-    public SetProductSet(int id, String title, String kind, String title_Img, int price, String manufacturer, int saved_money, int distribution_cost, int asset_inventory_surplus, String country_of_origin, String grade, int count, boolean for_sale, List<String> product_picture, String product_detail_info) {
+    public CoffeeMachine(int id, String title, String kind, String title_Img, int price, String manufacturer, int saved_money, int distribution_cost, int asset_inventory_surplus, String country_of_origin, int count, boolean for_sale, List<String> product_picture, String product_detail_info) {
         this.id = id;
         this.title = title;
         this.kind = kind;
@@ -47,15 +39,10 @@ public class SetProductSet {
         this.distribution_cost = distribution_cost;
         this.asset_inventory_surplus = asset_inventory_surplus;
         this.country_of_origin = country_of_origin;
-        this.grade = grade;
         this.count = count;
         For_sale = for_sale;
         this.product_picture = product_picture;
         this.product_detail_info = product_detail_info;
-    }
-
-    public String getKind() {
-        return kind;
     }
 
     public int getId() {
@@ -72,6 +59,14 @@ public class SetProductSet {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public String getKind() {
+        return kind;
+    }
+
+    public void setKind(String kind) {
+        this.kind = kind;
     }
 
     public String getTitle_Img() {
@@ -128,14 +123,6 @@ public class SetProductSet {
 
     public void setCountry_of_origin(String country_of_origin) {
         this.country_of_origin = country_of_origin;
-    }
-
-    public String getGrade() {
-        return grade;
-    }
-
-    public void setGrade(String grade) {
-        this.grade = grade;
     }
 
     public int getCount() {

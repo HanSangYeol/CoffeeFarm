@@ -104,26 +104,20 @@ public class TeebagFragment extends Fragment {
                 filterKind.clear();
                 int kindNum = Integer.parseInt(view.getTag().toString());
                 if (kindNum == 0) {
-                    filterKind.add("PNG");
-                    filterKind.add("오세아니아");
-                    categoryName.setText("PNG/오세아니아");
+                    filterKind.add("드립티백");
+                    categoryName.setText("드립티백");
                 } else if (kindNum == 1) {
-                    filterKind.add("중남미");
-                    categoryName.setText("중남미");
+                    filterKind.add("티백");
+                    categoryName.setText("티백");
                 } else if (kindNum == 2) {
-                    filterKind.add("아프리카");
-                    categoryName.setText("아프리카");
+                    filterKind.add("원두제품");
+                    categoryName.setText("원두제품");
                 } else if (kindNum == 3) {
-                    filterKind.add("북미");
-                    filterKind.add("하와이");
-                    categoryName.setText("북미/하와이");
+                    filterKind.add("캔커피");
+                    categoryName.setText("캔커피");
                 } else if (kindNum == 4) {
-                    filterKind.add("아시아");
-                    filterKind.add("중동");
-                    categoryName.setText("아시아/중동");
-                } else if (kindNum == 5) {
-                    filterKind.add("기타");
-                    categoryName.setText("기타");
+                    filterKind.add("더치커피");
+                    categoryName.setText("더치커피");
                 }
                 drawLayout();
 
