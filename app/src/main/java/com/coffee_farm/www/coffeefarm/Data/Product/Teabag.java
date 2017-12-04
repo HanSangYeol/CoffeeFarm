@@ -1,12 +1,13 @@
-package com.coffee_farm.www.coffeefarm.Data;
+package com.coffee_farm.www.coffeefarm.Data.Product;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by the on 2017-11-23.
+ * Created by the on 2017-12-04.
  */
 
-public class Bean {
+public class Teabag {
 
     private int id;
     private String title; // 이름
@@ -16,19 +17,23 @@ public class Bean {
     private int saved_money; // 적립금
     private int distribution_cost; // 배송비
     private int asset_inventory_surplus; // 재고수량
-    private String grade; // 등급
+    private String grade; // 등급,종류
     private String country_of_origin; // 원산지
     private int count; // 수량
     private boolean For_sale; // 판매여부
+
+    private int select1;
+
+    private List<String> Category = new ArrayList<>(); // 제품사진
 
     private List<String> product_picture; // 제품사진
 
     private String product_detail_info; // 제품상세정보
 
-    public Bean() {
+    public Teabag() {
     }
 
-    public Bean(int id, String title, String title_Img, int price, String manufacturer, int saved_money, int distribution_cost, int asset_inventory_surplus, String grade, String country_of_origin, int count, boolean for_sale, List<String> product_picture, String product_detail_info) {
+    public Teabag(int id, String title, String title_Img, int price, String manufacturer, int saved_money, int distribution_cost, int asset_inventory_surplus, String grade, String country_of_origin, int count, boolean for_sale, List<String> product_picture, String product_detail_info) {
         this.id = id;
         this.title = title;
         this.title_Img = title_Img;

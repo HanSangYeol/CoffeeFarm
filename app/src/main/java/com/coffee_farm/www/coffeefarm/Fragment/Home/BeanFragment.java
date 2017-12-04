@@ -16,7 +16,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.coffee_farm.www.coffeefarm.Data.Bean;
+import com.coffee_farm.www.coffeefarm.Data.Product.Bean;
 import com.coffee_farm.www.coffeefarm.R;
 import com.coffee_farm.www.coffeefarm.Util.GlobalUtil;
 

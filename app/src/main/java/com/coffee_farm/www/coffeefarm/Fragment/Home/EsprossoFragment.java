@@ -11,13 +11,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.coffee_farm.www.coffeefarm.Data.Bean;
+import com.coffee_farm.www.coffeefarm.Data.Product.Bean;
 import com.coffee_farm.www.coffeefarm.R;
 import com.coffee_farm.www.coffeefarm.Util.GlobalUtil;
 
