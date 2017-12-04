@@ -1,6 +1,7 @@
 package com.coffee_farm.www.coffeefarm.Fragment.Home;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -17,6 +18,8 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.coffee_farm.www.coffeefarm.Data.Product.Bean;
+import com.coffee_farm.www.coffeefarm.Data.Product.Greenbean;
+import com.coffee_farm.www.coffeefarm.ProductDetailActivity;
 import com.coffee_farm.www.coffeefarm.R;
 import com.coffee_farm.www.coffeefarm.Util.GlobalUtil;
 
@@ -69,10 +72,18 @@ public class GreenBeanFragment extends Fragment {
 
 //        몇번째 데이터인지 체크.
         int pageNum = 0;
-        for (Bean beanData : GlobalUtil.GRRENBEAN_LIST) {
+        for (Greenbean beanData : GlobalUtil.GRRENBEAN_LIST) {
 
 //            XML로 그려낸 이미지뷰 받아오기.
             final View view = inf.inflate(R.layout.product_item, null);
+
+            view.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(getActivity(), ProductDetailActivity.class);
+                    startActivity(intent);
+                }
+            });
 
 
             view.setLayoutParams(new ViewGroup.LayoutParams(width/3, height/3));
@@ -118,6 +129,9 @@ public class GreenBeanFragment extends Fragment {
 
             }
         });
+
+
+
 
     }
 

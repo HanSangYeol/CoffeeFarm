@@ -7,7 +7,7 @@ import java.util.List;
  * Created by the on 2017-12-04.
  */
 
-public class PresentSet {
+public class SetProductSet {
 
     private int id;
     private String title; // 이름
@@ -20,11 +20,11 @@ public class PresentSet {
     private String country_of_origin; // 원산지
     private String grade; // 모델명
     private int select_option_1;
-    private List<PresentSetOption> option_1 = new ArrayList<>(); // 2중 1택
+    private List<SetProductOption> option_1 = new ArrayList<>(); // 2중 1택
     private int select_option_2;
-    private List<PresentSetOption> option_2 = new ArrayList<>(); // 2중 1택
+    private List<SetProductOption> option_2 = new ArrayList<>(); // 2중 1택
     private int beadstate;
-    private List<PresentSetOption> option_state = new ArrayList<>(); // 원두상태
+    private List<SetProductOption> option_state = new ArrayList<>(); // 원두상태
     private int count; // 수량
     private boolean For_sale; // 판매여부
 

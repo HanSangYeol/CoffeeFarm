@@ -7,17 +7,17 @@ import java.util.List;
  * Created by the on 2017-12-04.
  */
 
-public class PresentSetOption {
+public class SetProductOption {
 
     private int id;
     private String title;
     private Teabag teabag;
-    private List<PresentSetOptionItem> items = new ArrayList<>();
+    private List<SetProductOptionItem> items = new ArrayList<>();
 
-    public PresentSetOption() {
+    public SetProductOption() {
     }
 
-    public PresentSetOption(int id, String title, Teabag teabag) {
+    public SetProductOption(int id, String title, Teabag teabag) {
         this.id = id;
         this.title = title;
         this.teabag = teabag;
@@ -47,11 +47,11 @@ public class PresentSetOption {
         this.teabag = teabag;
     }
 
-    public List<PresentSetOptionItem> getItems() {
+    public List<SetProductOptionItem> getItems() {
         return items;
     }
 
-    public void setItems(List<PresentSetOptionItem> items) {
+    public void setItems(List<SetProductOptionItem> items) {
         this.items = items;
     }
 }

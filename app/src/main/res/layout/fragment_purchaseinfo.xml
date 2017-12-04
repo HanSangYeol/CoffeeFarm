@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:padding="5dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|left">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/circle_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="상품주문안내"
+                android:textColor="@color/coffee_text"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/"
+                android:textColor="@color/soft2_gray"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order Goods"
+                android:textColor="@color/soft2_gray"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:gravity="center|left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:gravity="center"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:textColor="@color/soft_black"
+                    android:text="★"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/soft_black"
+                    android:text="주문 안내"/>
+                <TextView
+                    android:gravity="center"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:textColor="@color/soft_black"
+                    android:text="★"/>
+            </LinearLayout>
+            <LinearLayout
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center|left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/soft_black"
+                    android:text="1. 일부 상품의 경우, 도서, 산간, 오지지역등 교통이 불편한 지역은 배송시 추가 배송비가 발생할 수 있습니다."/>
+            </LinearLayout>
+            <LinearLayout
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center|left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/soft_black"
+                    android:text="2. 상품의 특성상 개봉, 사용 후 취소 및 반품 처리는 불가하오니 구입하실 때 신중하게 선택하시기 바랍니다."/>
+            </LinearLayout>
+            <LinearLayout
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center|left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/soft_black"
+                    android:text="3. 일부상품은 신제품 출시 등 제조사 사정에 의해 가격이 변동될 수 있습니다."/>
+            </LinearLayout>
+            <LinearLayout
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center|left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/soft_black"
+                    android:text="4. 상품의 색상은 실제와 약간 다를 수 있습니다."/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:padding="5dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|left">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/circle_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="배송안내"
+                android:textColor="@color/coffee_text"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/"
+                android:textColor="@color/soft2_gray"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Guidance"
+                android:textColor="@color/soft2_gray"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:gravity="center|left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:gravity="center"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:textColor="@color/soft_black"
+                    android:text="★"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/soft_black"
+                    android:text="배송 정보"/>
+                <TextView
+                    android:gravity="center"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:textColor="@color/soft_black"
+                    android:text="★"/>
+            </LinearLayout>
+            <LinearLayout
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center|left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/soft_black"
+                    android:text="1. 입금확인 후 1~3일 정도 상품 준비기간이 소요되며, 주문량이 많을 경우
+    준비기간이 조금 더 소요될 수 있습니다."/>
+            </LinearLayout>
+            <LinearLayout
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center|left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/soft_black"
+                    android:text="2. 주문하신 상품은 배송완료 문자를 받아보신 후 1~2일 이내에 수령하실 수 있습니다."/>
+            </LinearLayout>
+            <LinearLayout
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center|left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/soft_black"
+                    android:text="3. 10만원 이상 구매시 배송료는 무료입니다."/>
+            </LinearLayout>
+            <LinearLayout
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center|left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/soft_black"
+                    android:text="※ 해외배송은 무료배송이벤트에서 제외됩니다.해외배송 상품무게는 별도 측정 후
+    주문상품 구매액 + 운임료와 함께 결제해주셔야 합니다.
+
+"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:padding="5dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|left">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/circle_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="교환/반품안내"
+                android:textColor="@color/coffee_text"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/"
+                android:textColor="@color/soft2_gray"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Refunds |u0026 exchages"
+                android:textColor="@color/soft2_gray"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:gravity="center|left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:gravity="center"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:textColor="@color/soft_black"
+                    android:text="★"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/soft_black"
+                    android:text="환불 안내"/>
+                <TextView
+                    android:gravity="center"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:textColor="@color/soft_black"
+                    android:text="★"/>
+            </LinearLayout>
+            <LinearLayout
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center|left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/soft_black"
+                    android:text="1. 상품 출하 전 환불요청시 처리는 1~2일정도 소요되며, 배송이 진행중이거나 완료된
+    후에는 상품이 회수된 날짜로부터 3일 이내에 처리됩니다."/>
+            </LinearLayout>
+            <LinearLayout
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center|left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/soft_black"
+                    android:text="2. 무통장/실시간계좌이체를 이용하신 경우 고객님의 은행계좌로 이체되며,
+    주문자성함,혹은 입금자성함과 동일한 계좌로만 이체처리됩니다."/>
+            </LinearLayout>
+            <LinearLayout
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center|left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/soft_black"
+                    android:text="3. 신용카드결제 고객님의 경우 승인취소 처리 해드립니다.
+    (신용카드사의 업무처리상 7~15일가량 소요됨)
+
+"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:padding="5dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|left">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/circle_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="결제안내"
+                android:textColor="@color/coffee_text"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/"
+                android:textColor="@color/soft2_gray"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Settlement Goods"
+                android:textColor="@color/soft2_gray"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:gravity="center|left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:gravity="center"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:textColor="@color/soft_black"
+                    android:text="★"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/soft_black"
+                    android:text="결제 정보"/>
+                <TextView
+                    android:gravity="center"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:textColor="@color/soft_black"
+                    android:text="★"/>
+            </LinearLayout>
+            <LinearLayout
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center|left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/soft_black"
+                    android:text="1. 3개월 무이자 결제를 이용하실 수 있습니다."/>
+            </LinearLayout>
+            <LinearLayout
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center|left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/soft_black"
+                    android:text="2. KCP/INICIS/LG데이콤등 안전한 PG업체를 통해 결제가 이루어집니다."/>
+            </LinearLayout>
+            <LinearLayout
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center|left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/soft_black"
+                    android:text="3. 10만원 이상 상품구매시 에스크로 서비스를 이용하실 수 있습니다."/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>

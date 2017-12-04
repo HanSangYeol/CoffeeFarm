@@ -4,17 +4,17 @@ package com.coffee_farm.www.coffeefarm.Data.Product;
  * Created by the on 2017-12-04.
  */
 
-public class PresentSetOptionItem {
+public class SetProductOptionItem {
 
     private int id;
     private String title;
     private int price;
-    private PresentSetOption option;
+    private SetProductOption option;
 
-    public PresentSetOptionItem() {
+    public SetProductOptionItem() {
     }
 
-    public PresentSetOptionItem(int id, String title, int price, PresentSetOption option) {
+    public SetProductOptionItem(int id, String title, int price, SetProductOption option) {
         this.id = id;
         this.title = title;
         this.price = price;
@@ -45,11 +45,11 @@ public class PresentSetOptionItem {
         this.price = price;
     }
 
-    public PresentSetOption getOption() {
+    public SetProductOption getOption() {
         return option;
     }
 
-    public void setOption(PresentSetOption option) {
+    public void setOption(SetProductOption option) {
         this.option = option;
     }
 }
