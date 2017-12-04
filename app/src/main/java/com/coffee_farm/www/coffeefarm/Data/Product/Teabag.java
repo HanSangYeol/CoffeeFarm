@@ -22,10 +22,6 @@ public class Teabag {
     private int count; // 수량
     private boolean For_sale; // 판매여부
 
-    private int select1;
-
-    private List<String> Category = new ArrayList<>(); // 제품사진
-
     private List<String> product_picture; // 제품사진
 
     private String product_detail_info; // 제품상세정보

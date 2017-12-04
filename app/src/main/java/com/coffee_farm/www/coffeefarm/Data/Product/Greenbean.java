@@ -8,7 +8,6 @@ import java.util.List;
 
 public class Greenbean {
 
-
     private int id;
     private String title; // 이름
     private String title_Img; // 타이틀사진
