@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.coffee_farm.www.coffeefarm.Adapter.QuestionAdapter;
@@ -19,6 +20,7 @@ public class QNAActivity extends BaseActivity {
     QuestionAdapter questionAdapter;
     List<Question> questionList;
     private android.widget.ListView qnaListView;
+    private android.widget.ImageView backBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,5 +78,6 @@ public class QNAActivity extends BaseActivity {
     public void bindView() {
         this.bottomTab = (BottomNavigationView) findViewById(R.id.bottomTab);
         this.qnaListView = (ListView) findViewById(R.id.qnaListView);
+        this.backBtn = (ImageView) findViewById(R.id.backBtn);
     }
 }
