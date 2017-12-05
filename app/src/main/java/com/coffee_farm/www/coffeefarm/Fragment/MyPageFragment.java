@@ -12,12 +12,14 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.coffee_farm.www.coffeefarm.LoginActivity;
 import com.coffee_farm.www.coffeefarm.MainActivity;
 import com.coffee_farm.www.coffeefarm.MyInfoActivity;
 import com.coffee_farm.www.coffeefarm.MyShoppingActivity;
 import com.coffee_farm.www.coffeefarm.MySpaceActivity;
 import com.coffee_farm.www.coffeefarm.R;
 import com.coffee_farm.www.coffeefarm.ShoppingBasketActivity;
+import com.coffee_farm.www.coffeefarm.Util.ContextUtil;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -28,6 +30,10 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class MyPageFragment extends Fragment {
 
     int REQUEST_ACTIVITY = 1000;
+
+    int REQUEST_LOGIN = 1001;
+
+    int REQUEST_MYINFO = 1002;
 
     private CircleImageView orderinquiryBtn;
     private CircleImageView itemofinterestBtn;
@@ -86,8 +92,16 @@ public class MyPageFragment extends Fragment {
         shoppingbasketBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), ShoppingBasketActivity.class);
-                startActivity(intent);
+                Intent intent;
+                if (ContextUtil.getLoginUserInfo(getActivity()) == null){
+                    intent = new Intent(getActivity(), ShoppingBasketActivity.class);
+
+                    startActivity(intent);
+                }else {
+                    intent = new Intent(getActivity(), LoginActivity.class);
+
+                    startActivityForResult(intent, REQUEST_LOGIN);
+                }
             }
         });
         View.OnClickListener myshoppingListener = new View.OnClickListener() {
@@ -159,5 +173,12 @@ public class MyPageFragment extends Fragment {
                 }
             }
         }
+
+        if (requestCode == REQUEST_LOGIN){
+            if (resultCode == Activity.RESULT_OK){
+
+            }
+        }
     }
+
 }

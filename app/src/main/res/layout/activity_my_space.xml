@@ -30,7 +30,7 @@
             android:layout_height="match_parent">
             <fragment
                 android:id="@+id/mycouponFragment"
-                class="com.coffee_farm.www.coffeefarm.Fragment.MySpace.MyCoupon"
+                class="com.coffee_farm.www.coffeefarm.Fragment.MySpace.MyCouponFragment"
                 tools:layout="@layout/fragment_mycoupon"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>

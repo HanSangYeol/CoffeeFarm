@@ -20,7 +20,7 @@ import java.util.List;
  * Created by the on 2017-12-01.
  */
 
-public class MyCoupon extends Fragment {
+public class MyCouponFragment extends Fragment {
 
     CouponAdapter couponAdapter;
     List<Coupon> couponList;

@@ -31,7 +31,7 @@
             android:layout_height="30dp"
             android:layout_gravity="center|right"
             android:layout_marginRight="10dp"
-            android:src="@drawable/shopping_basket" />
+            android:src="@drawable/cart" />
     </FrameLayout>
 
     <TextView
@@ -55,6 +55,7 @@
                 android:layout_height="300dp">
 
                 <LinearLayout
+                    android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:background="#DBA417">
@@ -189,122 +190,150 @@
                     </LinearLayout>
 
                 </LinearLayout>
-
                 <LinearLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:orientation="vertical"
+                    android:background="@color/background_tab_pressed">
+
+                    <TextView
+                        android:textColor="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="로그인하고"/>
+                    <TextView
+                        android:textColor="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="각종 혜택 받으세요!"/>
+
+
+
+               </LinearLayout>
+
+
+                <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
-                    android:layout_marginTop="150dp"
-                    android:background="#FFFFFF"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="10dp"
-                        android:text="MY SHOPPING"
-                        android:textColor="@color/black"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginRight="20dp"
-                        android:background="@color/divider_brown_line"/>
+                    android:layout_marginTop="150dp">
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:background="#FFFFFF"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="MY SHOPPING"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:background="@color/divider_brown_line"/>
                         <LinearLayout
-                            android:layout_width="00dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:orientation="vertical">
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
 
-                            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                                android:id="@+id/orderinquiryBtn"
-                                android:tag="0"
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_weight="2"
-                                android:padding="5dp"
-                                android:src="@mipmap/ic_launcher_round"
-                                app:civ_border_color="#FFFDFDFD"
-                                app:civ_border_width="2dp" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="0dp"
+                            <LinearLayout
+                                android:layout_width="00dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:gravity="center"
-                                android:text="주문/배송조회"
-                                android:textColor="@color/dark_gray"
-                                android:textSize="12sp" />
-                        </LinearLayout>
+                                android:orientation="vertical">
 
-                        <LinearLayout
-                            android:layout_width="00dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:orientation="vertical">
+                                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                    android:id="@+id/orderinquiryBtn"
+                                    android:tag="0"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="2"
+                                    android:padding="5dp"
+                                    android:src="@mipmap/ic_launcher_round"
+                                    app:civ_border_color="#FFFDFDFD"
+                                    app:civ_border_width="2dp" />
 
-                            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                                android:id="@+id/itemofinterestBtn"
-                                android:tag="1"
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_weight="2"
-                                android:padding="5dp"
-                                android:src="@mipmap/ic_launcher_round"
-                                app:civ_border_color="#FFFDFDFD"
-                                app:civ_border_width="2dp" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="주문/배송조회"
+                                    android:textColor="@color/dark_gray"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="0dp"
+                            <LinearLayout
+                                android:layout_width="00dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:gravity="center"
-                                android:text="관심상품"
-                                android:textColor="@color/dark_gray"
-                                android:textSize="12sp" />
-                        </LinearLayout>
+                                android:orientation="vertical">
 
-                        <LinearLayout
-                            android:layout_width="00dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:orientation="vertical">
+                                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                    android:id="@+id/itemofinterestBtn"
+                                    android:tag="1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="2"
+                                    android:padding="5dp"
+                                    android:src="@mipmap/ic_launcher_round"
+                                    app:civ_border_color="#FFFDFDFD"
+                                    app:civ_border_width="2dp" />
 
-                            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                                android:id="@+id/canceledinquiryBtn"
-                                android:tag="2"
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_weight="2"
-                                android:padding="5dp"
-                                android:src="@mipmap/ic_launcher_round"
-                                app:civ_border_color="#FFFDFDFD"
-                                app:civ_border_width="2dp" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="관심상품"
+                                    android:textColor="@color/dark_gray"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="0dp"
+                            <LinearLayout
+                                android:layout_width="00dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:gravity="center"
-                                android:text="취소/반품/교환조회"
-                                android:textColor="@color/dark_gray"
-                                android:textSize="12sp" />
-                        </LinearLayout>
+                                android:orientation="vertical">
 
+                                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                    android:id="@+id/canceledinquiryBtn"
+                                    android:tag="2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="2"
+                                    android:padding="5dp"
+                                    android:src="@mipmap/ic_launcher_round"
+                                    app:civ_border_color="#FFFDFDFD"
+                                    app:civ_border_width="2dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="취소/반품/교환조회"
+                                    android:textColor="@color/dark_gray"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
+
+                </FrameLayout>
+
             </FrameLayout>
 
             <LinearLayout

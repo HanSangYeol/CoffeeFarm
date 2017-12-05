@@ -1,5 +1,6 @@
 package com.coffee_farm.www.coffeefarm.Fragment;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -13,14 +14,18 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.coffee_farm.www.coffeefarm.Adapter.HomeFragmentAdapter;
+import com.coffee_farm.www.coffeefarm.LoginActivity;
 import com.coffee_farm.www.coffeefarm.R;
 import com.coffee_farm.www.coffeefarm.ShoppingBasketActivity;
+import com.coffee_farm.www.coffeefarm.Util.ContextUtil;
 
 /**
  * Created by the on 2017-11-22.
  */
 
 public class HomeFragment extends Fragment {
+
+    int REQUEST_LOGIN = 1001;
 
     private android.support.design.widget.TabItem tabItem1;
     private android.support.design.widget.TabItem tabItem2;
@@ -69,10 +74,29 @@ public class HomeFragment extends Fragment {
         shoppingbasketBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), ShoppingBasketActivity.class);
-                startActivity(intent);
+                Intent intent;
+                if (ContextUtil.getLoginUserInfo(getActivity()) == null){
+                    intent = new Intent(getActivity(), ShoppingBasketActivity.class);
+
+                    startActivity(intent);
+                }else {
+                    intent = new Intent(getActivity(), LoginActivity.class);
+
+                    startActivityForResult(intent, REQUEST_LOGIN);
+                }
+
             }
         });
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REQUEST_LOGIN){
+            if (resultCode == Activity.RESULT_OK){
+
+            }
+        }
     }
 
     private void setValues() {

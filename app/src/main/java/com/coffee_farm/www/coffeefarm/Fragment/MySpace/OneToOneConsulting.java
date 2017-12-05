@@ -53,5 +53,12 @@ public class OneToOneConsulting extends Fragment {
                 getActivity().finish();
             }
         });
+
+        okBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().finish();
+            }
+        });
     }
 }

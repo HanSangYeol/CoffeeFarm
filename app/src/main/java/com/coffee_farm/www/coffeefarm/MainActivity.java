@@ -92,6 +92,7 @@ public class MainActivity extends BaseActivity {
         else {
 //            최초로 백버튼을 눌렀거나, 혹은 2초 이상의 시간이 지난 후에 누름.
             Toast.makeText(mContext, "한번 더 누르면 앱이 종료됩니다.", Toast.LENGTH_SHORT).show();
+            bottomTab.setSelectedItemId(R.id.navigation_home);
         }
 
         backPressedTimeInMillis = currentTimeInMillis;
