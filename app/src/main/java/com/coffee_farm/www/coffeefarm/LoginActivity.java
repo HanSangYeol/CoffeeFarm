@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 public class LoginActivity extends BaseActivity {
 
+    public static LoginActivity loginActivity;
+
     private android.widget.ImageView backBtn;
     private android.widget.EditText inputidEdt;
     private android.widget.EditText inputpwEdt;
@@ -30,6 +32,8 @@ public class LoginActivity extends BaseActivity {
 
     @Override
     public void setValues() {
+
+        loginActivity = this;
 
     }
 
@@ -54,7 +58,8 @@ public class LoginActivity extends BaseActivity {
         signupBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(mContext, SignUpActivity.class);
+                startActivity(intent);
             }
         });
 

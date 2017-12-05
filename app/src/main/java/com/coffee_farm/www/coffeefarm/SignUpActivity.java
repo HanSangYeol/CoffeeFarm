@@ -1,8 +1,11 @@
 package com.coffee_farm.www.coffeefarm;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 public class SignUpActivity extends BaseActivity {
 
@@ -13,6 +16,7 @@ public class SignUpActivity extends BaseActivity {
     private android.widget.EditText inputemailEdt;
     private android.widget.EditText inputaddressEdt;
     private android.widget.EditText inputphoneEdt;
+    private android.widget.LinearLayout signupBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,12 +34,27 @@ public class SignUpActivity extends BaseActivity {
 
     @Override
     public void setupEvents() {
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
+        signupBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                LoginActivity.loginActivity.finish();
+                finish();
+            }
+        });
+
 
     }
 
     @Override
     public void bindView() {
-
+        this.signupBtn = (LinearLayout) findViewById(R.id.signupBtn);
         this.inputphoneEdt = (EditText) findViewById(R.id.inputphoneEdt);
         this.inputaddressEdt = (EditText) findViewById(R.id.inputaddressEdt);
         this.inputemailEdt = (EditText) findViewById(R.id.inputemailEdt);

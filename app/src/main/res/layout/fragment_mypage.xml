@@ -14,7 +14,7 @@
             android:layout_height="30dp"
             android:layout_gravity="center|left"
             android:layout_marginLeft="10dp"
-            android:src="@mipmap/ic_launcher" />
+            android:src="@drawable/setting" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -191,13 +191,14 @@
 
                 </LinearLayout>
                 <LinearLayout
-                    android:gravity="center"
+                    android:gravity="center|top"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:orientation="vertical"
-                    android:background="@color/background_tab_pressed">
+                    android:background="@color/red">
 
                     <TextView
+                        android:layout_marginTop="40dp"
                         android:textColor="@color/white"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -207,6 +208,16 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="각종 혜택 받으세요!"/>
+                    <TextView
+                        android:gravity="center"
+                        android:background="@color/white"
+                        android:layout_marginTop="20dp"
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text="로그인"
+                        android:textColor="@color/red"/>
 
 
 
@@ -259,8 +270,8 @@
                                     android:layout_height="0dp"
                                     android:layout_weight="2"
                                     android:padding="5dp"
-                                    android:src="@mipmap/ic_launcher_round"
-                                    app:civ_border_color="#FFFDFDFD"
+                                    android:src="@drawable/delivery"
+                                    app:civ_border_color="#FF000000"
                                     app:civ_border_width="2dp" />
 
                                 <TextView
@@ -287,8 +298,8 @@
                                     android:layout_height="0dp"
                                     android:layout_weight="2"
                                     android:padding="5dp"
-                                    android:src="@mipmap/ic_launcher_round"
-                                    app:civ_border_color="#FFFDFDFD"
+                                    android:src="@drawable/interest"
+                                    app:civ_border_color="#FF000000"
                                     app:civ_border_width="2dp" />
 
                                 <TextView
@@ -315,8 +326,8 @@
                                     android:layout_height="0dp"
                                     android:layout_weight="2"
                                     android:padding="5dp"
-                                    android:src="@mipmap/ic_launcher_round"
-                                    app:civ_border_color="#FFFDFDFD"
+                                    android:src="@drawable/cancle_return"
+                                    app:civ_border_color="#FF000000"
                                     app:civ_border_width="2dp" />
 
                                 <TextView

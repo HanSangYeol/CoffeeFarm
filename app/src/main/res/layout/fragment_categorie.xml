@@ -154,14 +154,16 @@
 
             </FrameLayout>
             <TextView
+                android:background="@color/white"
                 android:layout_width="match_parent"
                 android:layout_height="50dp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/soft_gray"/>
+                android:background="@color/soft2_gray"/>
             <LinearLayout
+                android:background="@color/soft_gray"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
@@ -179,11 +181,12 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1">
-
                         <ImageView
                             android:layout_width="45dp"
                             android:layout_height="45dp"
-                            android:src="@drawable/ic_notice"/>
+                            android:src="@drawable/notice"/>
+
+
                         <TextView
                             android:paddingTop="10dp"
                             android:layout_width="wrap_content"
@@ -194,7 +197,7 @@
                     <TextView
                         android:layout_width="1dp"
                         android:layout_height="match_parent"
-                        android:background="@color/soft_gray"/>
+                        android:background="@color/soft2_gray"/>
                     <LinearLayout
                         android:id="@+id/reviewLayout"
                         android:tag="1"
@@ -219,7 +222,7 @@
                     <TextView
                         android:layout_width="1dp"
                         android:layout_height="match_parent"
-                        android:background="@color/soft_gray"/>
+                        android:background="@color/soft2_gray"/>
                     <LinearLayout
                         android:id="@+id/qaLayout"
                         android:tag="2"
@@ -245,7 +248,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/soft_gray"/>
+                    android:background="@color/soft2_gray"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -279,7 +282,7 @@
                     <TextView
                         android:layout_width="1dp"
                         android:layout_height="match_parent"
-                        android:background="@color/soft_gray"/>
+                        android:background="@color/soft2_gray"/>
                     <LinearLayout
                         android:id="@+id/dataLayout"
                         android:tag="4"
@@ -307,7 +310,7 @@
                     <TextView
                         android:layout_width="1dp"
                         android:layout_height="match_parent"
-                        android:background="@color/soft_gray"/>
+                        android:background="@color/soft2_gray"/>
                     <LinearLayout
                         android:id="@+id/visitLayout"
                         android:tag="5"
@@ -335,7 +338,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/soft_gray"/>
+                    android:background="@color/soft2_gray"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="20dp" />
