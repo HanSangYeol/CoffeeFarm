@@ -76,13 +76,13 @@ public class HomeFragment extends Fragment {
             public void onClick(View view) {
                 Intent intent;
                 if (ContextUtil.getLoginUserInfo(getActivity()) == null){
-                    intent = new Intent(getActivity(), ShoppingBasketActivity.class);
-
-                    startActivity(intent);
-                }else {
                     intent = new Intent(getActivity(), LoginActivity.class);
 
                     startActivityForResult(intent, REQUEST_LOGIN);
+                }else {
+                    intent = new Intent(getActivity(), ShoppingBasketActivity.class);
+
+                    startActivity(intent);
                 }
 
             }

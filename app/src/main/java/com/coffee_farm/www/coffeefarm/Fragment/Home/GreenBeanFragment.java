@@ -93,6 +93,18 @@ public class GreenBeanFragment extends Fragment {
 
     private void setupEvents() {
 
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
         allview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

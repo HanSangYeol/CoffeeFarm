@@ -44,9 +44,8 @@
             android:label="@string/title_activity_shopping_basket" />
         <activity android:name=".ProductDetailActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".SignUpActivity">
-
-        </activity>
+        <activity android:name=".SignUpActivity"></activity>
+        <activity android:name=".SettingActivity"></activity>
     </application>
 
 </manifest>

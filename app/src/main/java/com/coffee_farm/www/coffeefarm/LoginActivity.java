@@ -2,11 +2,21 @@ package com.coffee_farm.www.coffeefarm;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.coffee_farm.www.coffeefarm.Data.User;
+import com.coffee_farm.www.coffeefarm.Util.ContextUtil;
+import com.coffee_farm.www.coffeefarm.Util.ServerUtil;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class LoginActivity extends BaseActivity {
 
@@ -49,9 +59,35 @@ public class LoginActivity extends BaseActivity {
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent();
-                setResult(RESULT_OK, intent);
-                finish();
+                ServerUtil.login(mContext, inputidEdt.getText().toString(),
+                        inputpwEdt.getText().toString(), new ServerUtil.JsonResponseHandler() {
+                    @Override
+                    public void onResponse(JSONObject json) {
+                        try {
+                            JSONArray jsonArray = json.getJSONArray("user");
+
+                            JSONObject user = jsonArray.getJSONObject(0);
+
+                            User tempUser = User.getUserFromJsonObject(user);
+
+                            if (inputidEdt.getText().toString().equals(tempUser.getLogin_id())){
+                                if (inputpwEdt.getText().toString().equals(tempUser.getPassword())){
+                                    ContextUtil.login(mContext, tempUser);
+                                    Toast.makeText(mContext, "로그인 성공", Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent();
+                                    intent.putExtra("로그인성공", 1);
+                                    setResult(RESULT_OK, intent);
+                                    finish();
+
+                                    Log.d("test", ContextUtil.getLoginUserInfo(mContext).getName());
+                                }
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                });
+
             }
         });
 

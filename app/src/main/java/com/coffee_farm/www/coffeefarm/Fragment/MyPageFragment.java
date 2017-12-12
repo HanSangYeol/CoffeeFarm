@@ -10,14 +10,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.coffee_farm.www.coffeefarm.Data.User;
 import com.coffee_farm.www.coffeefarm.LoginActivity;
 import com.coffee_farm.www.coffeefarm.MainActivity;
 import com.coffee_farm.www.coffeefarm.MyInfoActivity;
 import com.coffee_farm.www.coffeefarm.MyShoppingActivity;
 import com.coffee_farm.www.coffeefarm.MySpaceActivity;
 import com.coffee_farm.www.coffeefarm.R;
+import com.coffee_farm.www.coffeefarm.SettingActivity;
 import com.coffee_farm.www.coffeefarm.ShoppingBasketActivity;
 import com.coffee_farm.www.coffeefarm.Util.ContextUtil;
 
@@ -52,11 +55,29 @@ public class MyPageFragment extends Fragment {
     private LinearLayout editmembershipinfoBtn;
     private LinearLayout withdrawalBtn;
     private android.widget.ImageView shoppingbasketBtn;
+    private android.widget.TextView loginBtn;
+    private LinearLayout loginstatus;
+    private LinearLayout nonloginstatus;
+    private ImageView settingBtn;
+    private TextView nameTxt;
+    private TextView membershiplevelTxt;
+    private TextView savemoneyTxt;
+    private TextView pointTxt;
+    private TextView allamountTxt;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_mypage, container, false);
+        this.allamountTxt = (TextView) view.findViewById(R.id.allamountTxt);
+        this.pointTxt = (TextView) view.findViewById(R.id.pointTxt);
+        this.savemoneyTxt = (TextView) view.findViewById(R.id.savemoneyTxt);
+        this.membershiplevelTxt = (TextView) view.findViewById(R.id.membershiplevelTxt);
+        this.nameTxt = (TextView) view.findViewById(R.id.nameTxt);
+        this.settingBtn = (ImageView) view.findViewById(R.id.settingBtn);
+        this.nonloginstatus = (LinearLayout) view.findViewById(R.id.nonloginstatus);
+        this.loginstatus = (LinearLayout) view.findViewById(R.id.loginstatus);
+        this.loginBtn = (TextView) view.findViewById(R.id.loginBtn);
         this.shoppingbasketBtn = (ImageView) view.findViewById(R.id.shoppingbasketBtn);
         this.withdrawalBtn = (LinearLayout) view.findViewById(R.id.withdrawalBtn);
         this.editmembershipinfoBtn = (LinearLayout) view.findViewById(R.id.editmembershipinfoBtn);
@@ -86,58 +107,109 @@ public class MyPageFragment extends Fragment {
 
     private void setValues() {
 
+        if (ContextUtil.getLoginUserInfo(getActivity()) == null) {
+            nonloginstatus.setVisibility(View.VISIBLE);
+            loginstatus.setVisibility(View.GONE);
+        } else {
+            nameTxt.setText(ContextUtil.getLoginUserInfo(getActivity()).getName());
+            nonloginstatus.setVisibility(View.GONE);
+            loginstatus.setVisibility(View.VISIBLE);
+        }
+
+
     }
 
     private void setupEvents() {
+
+        settingBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), SettingActivity.class);
+
+                startActivity(intent);
+            }
+        });
+        loginBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), LoginActivity.class);
+                startActivityForResult(intent, REQUEST_LOGIN);
+            }
+        });
         shoppingbasketBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent;
                 if (ContextUtil.getLoginUserInfo(getActivity()) == null){
-                    intent = new Intent(getActivity(), ShoppingBasketActivity.class);
-
-                    startActivity(intent);
-                }else {
                     intent = new Intent(getActivity(), LoginActivity.class);
 
                     startActivityForResult(intent, REQUEST_LOGIN);
+                }else {
+                    intent = new Intent(getActivity(), ShoppingBasketActivity.class);
+
+                    startActivity(intent);
                 }
             }
         });
         View.OnClickListener myshoppingListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), MyShoppingActivity.class);
-                intent.putExtra("myshoppingNumbering", Integer.parseInt(view.getTag().toString()));
-                startActivityForResult(intent, REQUEST_ACTIVITY);
+                if (ContextUtil.getLoginUserInfo(getActivity()) == null){
+                    Toast.makeText(getActivity(), "로그인 후 사용 가능한 기능입니다.", Toast.LENGTH_SHORT).show();
+                }else {
+                    Intent intent = new Intent(getActivity(), MyShoppingActivity.class);
+                    intent.putExtra("myshoppingNumbering", Integer.parseInt(view.getTag().toString()));
+                    startActivityForResult(intent, REQUEST_ACTIVITY);
+                }
+
             }
         };
         View.OnClickListener myspaceListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), MySpaceActivity.class);
-                intent.putExtra("myspaceNumbering", Integer.parseInt(view.getTag().toString()));
-                startActivityForResult(intent, REQUEST_ACTIVITY);
+                if (ContextUtil.getLoginUserInfo(getActivity()) == null){
+                    Toast.makeText(getActivity(), "로그인 후 사용 가능한 기능입니다.", Toast.LENGTH_SHORT).show();
+                }else {
+                    Intent intent = new Intent(getActivity(), MySpaceActivity.class);
+                    intent.putExtra("myspaceNumbering", Integer.parseInt(view.getTag().toString()));
+                    startActivityForResult(intent, REQUEST_ACTIVITY);
+                }
+
             }
         };
         View.OnClickListener myinfoListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), MyInfoActivity.class);
-                intent.putExtra("myinfoNumbering", Integer.parseInt(view.getTag().toString()));
-                startActivityForResult(intent, REQUEST_ACTIVITY);
+                if (ContextUtil.getLoginUserInfo(getActivity()) == null){
+                    Toast.makeText(getActivity(), "로그인 후 사용 가능한 기능입니다.", Toast.LENGTH_SHORT).show();
+                }else {
+                    Intent intent = new Intent(getActivity(), MyInfoActivity.class);
+                    intent.putExtra("myinfoNumbering", Integer.parseInt(view.getTag().toString()));
+                    startActivityForResult(intent, REQUEST_ACTIVITY);
+                }
+
             }
         };
         View.OnClickListener preparingListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getActivity(), "준비 중인 기능입니다", Toast.LENGTH_SHORT).show();
+                if (ContextUtil.getLoginUserInfo(getActivity()) == null){
+                    Toast.makeText(getActivity(), "로그인 후 사용 가능한 기능입니다.", Toast.LENGTH_SHORT).show();
+                }else {
+                    Toast.makeText(getActivity(), "준비 중인 기능입니다", Toast.LENGTH_SHORT).show();
+                }
+
             }
         };
         View.OnClickListener taxListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getActivity(), "세금 계산서 발행은 1:1문의로 문의해주세요", Toast.LENGTH_SHORT).show();
+                if (ContextUtil.getLoginUserInfo(getActivity()) == null){
+                    Toast.makeText(getActivity(), "로그인 후 사용 가능한 기능입니다.", Toast.LENGTH_SHORT).show();
+                }else {
+                    Toast.makeText(getActivity(), "세금 계산서 발행은 1:1문의로 문의해주세요", Toast.LENGTH_SHORT).show();
+                }
+
             }
         };
         orderinquiryBtn.setOnClickListener(myshoppingListener);
@@ -159,6 +231,22 @@ public class MyPageFragment extends Fragment {
     }
 
     @Override
+    public void onResume() {
+        super.onResume();
+
+        if (ContextUtil.getLoginUserInfo(getActivity()) == null) {
+            nonloginstatus.setVisibility(View.VISIBLE);
+            loginstatus.setVisibility(View.GONE);
+        } else {
+            nameTxt.setText(ContextUtil.getLoginUserInfo(getActivity()).getName());
+            nonloginstatus.setVisibility(View.GONE);
+            loginstatus.setVisibility(View.VISIBLE);
+        }
+
+
+    }
+
+    @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == REQUEST_ACTIVITY){
@@ -176,7 +264,6 @@ public class MyPageFragment extends Fragment {
 
         if (requestCode == REQUEST_LOGIN){
             if (resultCode == Activity.RESULT_OK){
-
             }
         }
     }

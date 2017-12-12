@@ -29,21 +29,21 @@ public class GlobalUtil {
 
     public static void GREENBEAN_DATE(){
         GRRENBEAN_LIST.clear();
-        GRRENBEAN_LIST.add(new Greenbean(1, "생두1","PNG","http://cfile26.uf.tistory.com/image/2475683A57AD6B2028AE97", 10000, "제조사", 250,2500,1000,"등급","원산지", 100,true, null,"상세정보"));
-        GRRENBEAN_LIST.add(new Greenbean(2, "생두2","오세아니아","http://cfile26.uf.tistory.com/image/2475683A57AD6B2028AE97", 10000, "제조사", 250,2500,1000,"등급","원산지", 100,true, null,"상세정보"));
-        GRRENBEAN_LIST.add(new Greenbean(3, "생두3","중남미","http://coffee-farm.com/skin/goods/list/46.jpg", 10000, "제조사", 250,2500,1000,"등급","원산지", 100,true, null,"상세정보"));
-        GRRENBEAN_LIST.add(new Greenbean(4, "생두4","중남미","http://coffee-farm.com/skin/goods/list/46.jpg", 10000, "제조사", 250,2500,1000,"등급","원산지", 100,true, null,"상세정보"));
-        GRRENBEAN_LIST.add(new Greenbean(5, "생두5","중남미","http://coffee-farm.com/skin/goods/list/46.jpg", 10000, "제조사", 250,2500,1000,"등급","원산지", 100,true, null,"상세정보"));
-        GRRENBEAN_LIST.add(new Greenbean(6, "생두6","아프리카","http://coffee-farm.com/skin/goods/list/54.jpg", 10000, "제조사", 250,2500,1000,"등급","원산지", 100,true, null,"상세정보"));
-        GRRENBEAN_LIST.add(new Greenbean(7, "생두7","아프리카","http://coffee-farm.com/skin/goods/list/54.jpg", 10000, "제조사", 250,2500,1000,"등급","원산지", 100,true, null,"상세정보"));
-        GRRENBEAN_LIST.add(new Greenbean(8, "생두8","아프리카","http://coffee-farm.com/skin/goods/list/54.jpg", 10000, "제조사", 250,2500,1000,"등급","원산지", 100,true, null,"상세정보"));
-        GRRENBEAN_LIST.add(new Greenbean(9, "생두9","아프리카","http://coffee-farm.com/skin/goods/list/54.jpg", 10000, "제조사", 250,2500,1000,"등급","원산지", 100,true, null,"상세정보"));
-        GRRENBEAN_LIST.add(new Greenbean(10,"생두10" ,"북미","http://coffee-farm.com/skin/goods/list/127.jpg", 10000, "제조사", 250,2500,1000,"등급","원산지", 100,true, null,"상세정보"));
-        GRRENBEAN_LIST.add(new Greenbean(11,"생두11" ,"하와이","http://coffee-farm.com/skin/goods/list/59.jpg", 10000, "제조사", 250,2500,1000,"등급","원산지", 100,true, null,"상세정보"));
-        GRRENBEAN_LIST.add(new Greenbean(12,"생두12" ,"아시아","http://coffee-farm.com/skin/goods/list/62.jpg", 10000, "제조사", 250,2500,1000,"등급","원산지", 100,true, null,"상세정보"));
-        GRRENBEAN_LIST.add(new Greenbean(13,"생두13" ,"중동","http://coffee-farm.com/skin/goods/list/56.jpg", 10000, "제조사", 250,2500,1000,"등급","원산지", 100,true, null,"상세정보"));
-        GRRENBEAN_LIST.add(new Greenbean(14,"생두14" ,"중동","http://coffee-farm.com/skin/goods/list/56.jpg", 10000, "제조사", 250,2500,1000,"등급","원산지", 100,true, null,"상세정보"));
-        GRRENBEAN_LIST.add(new Greenbean(15,"생두15" ,"중동","http://coffee-farm.com/skin/goods/list/56.jpg", 10000, "제조사", 250,2500,1000,"등급","원산지", 100,true, null,"상세정보"));
+        GRRENBEAN_LIST.add(new Greenbean(1, "생두1","PNG","http://cfile26.uf.tistory.com/image/2475683A57AD6B2028AE97", 12000, "제조사", 250,2500,1000,"등급","원산지", 100,true, null,"상세정보"));
+        GRRENBEAN_LIST.add(new Greenbean(2, "생두2","오세아니아","http://cfile26.uf.tistory.com/image/2475683A57AD6B2028AE97", 12000, "제조사", 250,2500,1000,"등급","원산지", 100,true, null,"상세정보"));
+        GRRENBEAN_LIST.add(new Greenbean(3, "생두3","중남미","http://coffee-farm.com/skin/goods/list/46.jpg", 14000, "제조사", 250,2500,1000,"등급","원산지", 100,true, null,"상세정보"));
+        GRRENBEAN_LIST.add(new Greenbean(4, "생두4","중남미","http://coffee-farm.com/skin/goods/list/46.jpg", 14000, "제조사", 250,2500,1000,"등급","원산지", 100,true, null,"상세정보"));
+        GRRENBEAN_LIST.add(new Greenbean(5, "생두5","중남미","http://coffee-farm.com/skin/goods/list/46.jpg", 14000, "제조사", 250,2500,1000,"등급","원산지", 100,true, null,"상세정보"));
+        GRRENBEAN_LIST.add(new Greenbean(6, "생두6","아프리카","http://coffee-farm.com/skin/goods/list/54.jpg", 15000, "제조사", 250,2500,1000,"등급","원산지", 100,true, null,"상세정보"));
+        GRRENBEAN_LIST.add(new Greenbean(7, "생두7","아프리카","http://coffee-farm.com/skin/goods/list/54.jpg", 15000, "제조사", 250,2500,1000,"등급","원산지", 100,true, null,"상세정보"));
+        GRRENBEAN_LIST.add(new Greenbean(8, "생두8","아프리카","http://coffee-farm.com/skin/goods/list/54.jpg", 15000, "제조사", 250,2500,1000,"등급","원산지", 100,true, null,"상세정보"));
+        GRRENBEAN_LIST.add(new Greenbean(9, "생두9","아프리카","http://coffee-farm.com/skin/goods/list/54.jpg", 15000, "제조사", 250,2500,1000,"등급","원산지", 100,true, null,"상세정보"));
+        GRRENBEAN_LIST.add(new Greenbean(10,"생두10" ,"북미","http://coffee-farm.com/skin/goods/list/127.jpg", 9000, "제조사", 250,2500,1000,"등급","원산지", 100,true, null,"상세정보"));
+        GRRENBEAN_LIST.add(new Greenbean(11,"생두11" ,"하와이","http://coffee-farm.com/skin/goods/list/59.jpg", 7000, "제조사", 250,2500,1000,"등급","원산지", 100,true, null,"상세정보"));
+        GRRENBEAN_LIST.add(new Greenbean(12,"생두12" ,"아시아","http://coffee-farm.com/skin/goods/list/62.jpg", 7000, "제조사", 250,2500,1000,"등급","원산지", 100,true, null,"상세정보"));
+        GRRENBEAN_LIST.add(new Greenbean(13,"생두13" ,"중동","http://coffee-farm.com/skin/goods/list/56.jpg", 20000, "제조사", 250,2500,1000,"등급","원산지", 100,true, null,"상세정보"));
+        GRRENBEAN_LIST.add(new Greenbean(14,"생두14" ,"중동","http://coffee-farm.com/skin/goods/list/56.jpg", 20000, "제조사", 250,2500,1000,"등급","원산지", 100,true, null,"상세정보"));
+        GRRENBEAN_LIST.add(new Greenbean(15,"생두15" ,"중동","http://coffee-farm.com/skin/goods/list/56.jpg", 20000, "제조사", 250,2500,1000,"등급","원산지", 100,true, null,"상세정보"));
 
     }
 

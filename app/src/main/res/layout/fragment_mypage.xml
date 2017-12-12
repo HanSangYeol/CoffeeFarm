@@ -10,6 +10,7 @@
         android:layout_height="50dp">
 
         <ImageView
+            android:id="@+id/settingBtn"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_gravity="center|left"
@@ -48,17 +49,15 @@
             android:orientation="vertical">
 
 
-
-
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="300dp">
 
                 <LinearLayout
-                    android:visibility="gone"
+                    android:id="@+id/loginstatus"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:background="#DBA417">
+                    android:background="@color/colorAccent">
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -77,6 +76,8 @@
                             app:civ_border_width="2dp" />
 
                         <TextView
+                            android:id="@+id/nameTxt"
+                            android:padding="2dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
@@ -94,6 +95,7 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/membershiplevelTxt"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_weight="1"
@@ -122,6 +124,8 @@
                                     android:textSize="12sp" />
 
                                 <TextView
+                                    android:id="@+id/savemoneyTxt"
+                                    android:padding="2dp"
                                     android:layout_width="match_parent"
                                     android:layout_height="0dp"
                                     android:layout_weight="1"
@@ -147,6 +151,8 @@
                                     android:textSize="12sp" />
 
                                 <TextView
+                                    android:id="@+id/pointTxt"
+                                    android:padding="2dp"
                                     android:layout_width="match_parent"
                                     android:layout_height="0dp"
                                     android:layout_weight="1"
@@ -172,6 +178,8 @@
                                     android:textSize="12sp" />
 
                                 <TextView
+                                    android:id="@+id/allamountTxt"
+                                    android:padding="2dp"
                                     android:layout_width="match_parent"
                                     android:layout_height="0dp"
                                     android:layout_weight="1"
@@ -191,6 +199,8 @@
 
                 </LinearLayout>
                 <LinearLayout
+                    android:id="@+id/nonloginstatus"
+                    android:visibility="gone"
                     android:gravity="center|top"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
@@ -209,6 +219,7 @@
                         android:layout_height="wrap_content"
                         android:text="각종 혜택 받으세요!"/>
                     <TextView
+                        android:id="@+id/loginBtn"
                         android:gravity="center"
                         android:background="@color/white"
                         android:layout_marginTop="20dp"
@@ -253,6 +264,7 @@
                             android:layout_marginRight="20dp"
                             android:background="@color/divider_brown_line"/>
                         <LinearLayout
+                            android:layout_marginTop="8dp"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
 
@@ -269,7 +281,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="0dp"
                                     android:layout_weight="2"
-                                    android:padding="5dp"
+                                    android:padding="8dp"
                                     android:src="@drawable/delivery"
                                     app:civ_border_color="#FF000000"
                                     app:civ_border_width="2dp" />
@@ -297,7 +309,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="0dp"
                                     android:layout_weight="2"
-                                    android:padding="5dp"
+                                    android:padding="8dp"
                                     android:src="@drawable/interest"
                                     app:civ_border_color="#FF000000"
                                     app:civ_border_width="2dp" />
@@ -325,7 +337,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="0dp"
                                     android:layout_weight="2"
-                                    android:padding="5dp"
+                                    android:padding="8dp"
                                     android:src="@drawable/cancle_return"
                                     app:civ_border_color="#FF000000"
                                     app:civ_border_width="2dp" />
