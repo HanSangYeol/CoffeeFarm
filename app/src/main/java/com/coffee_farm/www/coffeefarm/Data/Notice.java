@@ -5,4 +5,12 @@ package com.coffee_farm.www.coffeefarm.Data;
  */
 
 public class Notice {
+
+    private int id;
+    private String title;
+    private String writer;
+    private String date_created;
+    private String views;
+    private String content;
+
 }
